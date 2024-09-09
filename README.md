@@ -14,11 +14,13 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
+|202402011359 | Felipe Dutrain de Sales |
+| 202401632473 |  Guilherme de Moraes Lopes Silva |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+https://projetos-de-extensao.github.io/PFE_24.2_8001_IV_CCXP_GUIDE/
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
