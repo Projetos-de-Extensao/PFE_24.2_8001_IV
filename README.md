@@ -15,7 +15,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 |Matrícula | Aluno |
 | -- | -- |
 |202402011359 | Felipe Dutrain de Sales |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202401632473 |  Guilherme de Moraes Lopes Silva |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
