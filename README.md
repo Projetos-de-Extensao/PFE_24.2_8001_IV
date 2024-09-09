@@ -20,7 +20,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+Nosso objetivo é proporcionar aos visitantes uma experiência inesquecível ao conectar o evento da CCXP com o melhor que a cidade tem a oferecer. Queremos que todos os participantes não só vivam intensamente o evento, mas também desfrutem do que São Paulo oferece, desde atrações turísticas até opções gastronômicas e culturais. 
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
