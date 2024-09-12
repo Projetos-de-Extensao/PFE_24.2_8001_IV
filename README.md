@@ -17,6 +17,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 |202402011359 | Felipe Dutrain de Sales |
 | 202401632473 |  Guilherme de Moraes Lopes Silva |
 | 202407096166  | Enzo Edelman|
+| 202401590118  |  Jeronimo Chiclana |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
 ## Sobre 
