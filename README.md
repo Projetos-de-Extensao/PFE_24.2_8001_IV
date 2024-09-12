@@ -18,7 +18,7 @@ Esse repositório é para ser utilizado pelos grupos como um template inicial, d
 | 202401632473 |  Guilherme de Moraes Lopes Silva |
 | 202407096166  | Enzo Edelman|
 | 202401590118  |  Jeronimo Chiclana |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 202401000434  |  Julia Siodaro |
 
 ## Sobre 
 https://projetos-de-extensao.github.io/PFE_24.2_8001_IV_CCXP_GUIDE/
