@@ -26,8 +26,7 @@ Foi levantado um ponto importante sobre o app e, assim, foi produzido o mapa men
  
 ### Mapa mental 2
  
-[![Mapa mental Brainstorm](../assets/Mapas_mentais/...png)](assets/Mapas_mentais/....png)
- 
+[![Mapa mental Brainstorm](../assets/Mapas_mentais/mapa_mental01.png)]
 ## Conclusão
  
 <p align = "justify">
