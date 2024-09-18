@@ -5,41 +5,41 @@ title: Documento de Visão
 ## Introdução
 
 <p align = "justify">
-O propósito deste documento é fornecer uma visão geral sobre o projeto que será realizado na disciplina Arquitetura e Desenho de Software 2020/1, na Universidade de Brasília. Sendo assim, Nesse documento serão descritas de maneira resumida as principais funcionalidades, usabilidades, o problema que será abordado e os objetivos da equipe.
+O propósito deste documento é fornecer uma visão geral sobre o projeto que será realizado na disciplina Projeto Front End 2024/2 na Universidade IBMEC. Sendo assim, Nesse documento serão descritas de maneira resumida as principais funcionalidades, usabilidades, o problema que será abordado e os objetivos da equipe.
 </p>
 
 ## Descrição do Problema 
 
 <p align = "justify">
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+Durante grandes eventos como a CCXP, visitantes podem ter dificuldades em encontrar informações centralizadas e confiáveis sobre as atrações e serviços disponíveis na cidade de São Paulo. A vasta quantidade de opções pode tornar o processo de escolha e planejamento confuso e demorado, especialmente para quem não conhece bem a cidade.
 </p>
 
 ### Problema
 
-Dificuldade em gerenciar e organizar...
+Dificuldade em gerenciar e organizar informações sobre atrações, eventos culturais, restaurantes, lojas e serviços de saúde em São Paulo durante o período da CCXP, de forma eficiente e acessível.
 
 ### Impactados
 
-Usuários....
+Usuários que visitam a CCXP e desejam explorar a cidade de São Paulo, incluindo turistas nacionais e internacionais, fãs de cultura pop, e entusiastas do evento.
 
 ### Consequência
 
-A criação de novos....
+A falta de informações organizadas pode levar a uma experiência menos satisfatória, resultando em frustração e perda de oportunidades para aproveitar ao máximo o evento e a cidade.
 
 ### Solução
 
-Utilizar a aplicação que será desenvolvida visando resolver...
-
+Utilizar a aplicação web que será desenvolvida para fornecer uma plataforma centralizada com informações detalhadas sobre atrações, eventos, gastronomia, lojas, e serviços de saúde em São Paulo, auxiliando os visitantes da CCXP a terem uma experiência completa e bem planejada.
 ## Objetivos
 
 <p align = "justify">
-O objetivo da equipe de desenvolvimento é fornecer...
+O objetivo da equipe de desenvolvimento é fornecer uma ferramenta intuitiva e abrangente que permita aos visitantes da CCXP acessar facilmente informações sobre as principais atrações de São Paulo, ajudando-os a aproveitar melhor sua estadia na cidade.
 </p>
 
 ## Descrição do Usuário 
 
 <p align = "justify">
-Os usuários serão....
+Os usuários serão visitantes da CCXP que buscam informações sobre eventos e atrações na cidade de São Paulo, incluindo desde turistas até moradores locais interessados em novas experiências.
+
 </p>
 
 ## Recursos do produto
@@ -47,31 +47,14 @@ Os usuários serão....
 ### Conta
 
 <p align = "justify">
-O cliente poderá realizar seu cadastro....
+Conta: O cliente poderá realizar seu cadastro para personalizar sua experiência, salvando suas atrações e eventos favoritos.
 </p>
 
-### Loja
-
-<p align = "justify">
-O cliente poderá cadastrar uma loja única....
-</p>
-
-### Produto
-
-<p align = "justify">
-O cliente poderá cadastrar....
-</p>
-
-### Pesquisa sobre Lojas
-
-<p align = "justify">
-O cliente poderá pesquisar...
-</p>
 
 ## Restrições
 
 <p align = "justify">
-A aplicação não será responsável...
+A aplicação não será responsável pela compra ou reserva direta de ingressos, produtos ou serviços, mas servirá como um guia informativo para os usuários.
 </p>
 
 ## Referências Bibliográficas
@@ -83,5 +66,5 @@ A aplicação não será responsável...
 ## Versionamento
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| DD/MM/YYYY | 1.0 | Criação do documento | XXX XXXX e ZZZ ZZZZ | 
+| 17/09/2024 | 1.0 | Criação do documento | XXX XXXX e ZZZ ZZZZ | 
 
