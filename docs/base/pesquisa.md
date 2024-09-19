@@ -52,19 +52,23 @@ Hospital Sabará: Localizado na Rua Doutor Falcão Filho, 48 - Vila Mariana. Esp
 Esses hospitais oferecem uma variedade de serviços e especialidades, então você pode escolher o que melhor atende às suas necessidades.
 Ao redor da São Paulo Expo, você encontrará uma boa variedade de restaurantes que atendem a diferentes gostos e orçamentos. Aqui estão algumas recomendações:
 
-Shopping SP Market
+1. Shopping SP Market
 Restaurantes no próprio shopping: Há diversas opções de alimentação dentro do Shopping SP Market, incluindo Outback Steakhouse, Café Suplicy, Madero e Gendai.
+
 2. Bairro do Morumbi
 Rascal: Na Av. Giovanni Gronchi, 5334 - Morumbi. Oferece um buffet variado e uma seleção de pratos italianos e mediterrâneos.
 Bar do Juarez: Na Av. Francisco Morato, 1811 - Morumbi. Um lugar casual e popular, conhecido por seus petiscos e pratos tradicionais brasileiros.
 Bairro da Vila Olímpia
 Fogo de Chão: Na Av. das Nações Unidas, 12551 - Vila Olímpia. Um restaurante de churrasco brasileiro (rodízio) muito conhecido.
 D.O.M.: Na Rua Barão de Capanema, 549 - Jardins. Um restaurante renomado, comandado pelo chef Alex Atala, famoso por sua cozinha contemporânea e ingredientes brasileiros.
+
 4. Bairro do Itaim Bibi
 Cipriani: Na Rua Dr. Mário Ferraz, 377 - Itaim Bibi. Oferece alta gastronomia italiana em um ambiente sofisticado.
 Huto: Na Rua dos Três Irmãos, 97 - Itaim Bibi. Um restaurante de sushi e comida japonesa com uma ótima reputação.
 Bairro da Vila Mariana
 A Bela Sintra: Na Rua Domingos de Morais, 2388 - Vila Mariana. Famoso por sua comida portuguesa e ambiente acolhedor.
 Z Deli Sanduíches: Na Rua dos Três Irmãos, 189 - Vila Mariana. Conhecido por seus sanduíches gourmet e pratos americanos.
-6. Bairro do Jardins
+
+
+5. Bairro do Jardins
 Jiquitaia: Na Rua dos Três Irmãos, 226 - Jardins. Oferece uma cozinha brasileira contemporânea, com pratos criativos e saborosos.
