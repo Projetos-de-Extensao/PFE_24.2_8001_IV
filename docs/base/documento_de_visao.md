@@ -66,5 +66,5 @@ A aplicação não será responsável pela compra ou reserva direta de ingressos
 ## Versionamento
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| 17/09/2024 | 1.0 | Criação do documento | XXX XXXX e ZZZ ZZZZ | 
+| 17/09/2024 | 1.0 | Criação do documento | Felipe Sales | 
 
