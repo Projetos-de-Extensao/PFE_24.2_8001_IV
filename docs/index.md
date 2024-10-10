@@ -20,3 +20,5 @@ Este ano, os visitantes podem esperar uma programação intensa, com painéis ex
 * Sugerir locais de compras populares e temáticos na cidade.
 
 * Disponibilizar orientações sobre serviços de saúde e bem-estar para visitantes.
+
+# Slides de apresentação do projeto
