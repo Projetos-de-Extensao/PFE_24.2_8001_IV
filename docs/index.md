@@ -1,4 +1,4 @@
-# Projeto CCXP Guide:
+## Projeto CCXP Guide:
 
 O CCXP Guide é um site que busca proporcionar aos visitantes da CCXP uma experiência mais completa na cidade de São Paulo. Além de oferecer informações sobre o evento, o site também será um guia prático para explorar a cidade, destacando eventos culturais, opções gastronômicas, oportunidades de compras e serviços de saúde. O objetivo é ajudar os visitantes a aproveitar ao máximo sua estadia em São Paulo, tornando a experiência mais completa e confortável.
 
