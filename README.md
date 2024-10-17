@@ -19,8 +19,8 @@ https://projetos-de-extensao.github.io/PFE_24.2_8001_IV_CCXP_GUIDE/
 Adicione 3 ou mais screenshots do projeto em termos de interface e funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Html, Css, javascript<br>
+**Tecnologias**: Github, Github Pages e Visual Studio Code<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 
