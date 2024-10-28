@@ -74,24 +74,24 @@ body.no-background {
     margin-right: 10px; /* Ajuste o valor conforme necessário */
 }
 
-/* Video container styles */
 .video-container {
-  display: flex;                  /* Centers the video within the container */
-  justify-content: center;        /* Centers the video horizontally */
-  align-items: center;            /* Centers the video vertically */
-  margin: 20px 0;                /* Adds space above and below the video */
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em coluna */
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
-/* Video styles */
 .video-container video {
-  width: 100%;                   /* Makes the video responsive */
-  max-width: 800px;             /* Sets a maximum width for larger screens */
-  height: auto;                 /* Maintains the aspect ratio */
-  border-radius: 8px;          /* Adds rounded corners to the video */
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border: 5px solid yellow;        /* Borda amarela */
-  
+  border: 5px solid yellow;
+  margin-bottom: 20px; /* Adiciona espaço entre o vídeo e o próximo componente */
 }
+
 .video-container img{
   width: 100%;                   /* Makes the video responsive */
   max-width: 800px;             /* Sets a maximum width for larger screens */
@@ -298,3 +298,143 @@ button:focus-visible {
 /* Fim do BACKGROUND*/
 
 
+/* SECTION */
+
+.section-container {
+  background-color: #242424; /* Fundo preto do elemento */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 10px solid #5B28E5; /* Borda roxa no topo */
+  border-bottom: 10px solid #5B28E5; /* Borda roxa na parte inferior */
+  margin: 20px 0; /* Espaço entre as seções */
+  width: 100%;
+  position: relative; /* Para posicionamento absoluto dos ícones SVG */
+}
+
+.section-container .left-svg,
+.section-container .right-svg {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-container .left-svg {
+  left: -60px; /* Posiciona o ícone à esquerda */
+  z-index: +1;
+}
+
+.section-container .right-svg {
+  right: -60px; /* Posiciona o ícone à direita */
+  z-index: +1;
+  
+}
+
+.section-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-left .image-content {
+  order: 1; /* Imagem à esquerda */
+}
+
+.section-right .image-content {
+  order: 2; /* Imagem à direita */
+}
+
+.text-content {
+  flex: 1;
+  padding: 20px;
+  color: #fff;
+  background-color: #1A1A1A; /* Fundo interno da caixa de texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-content h1 {
+  font-size: 2em;
+  color: #FFD700; /* Cor do título em amarelo */
+}
+
+.text-content p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+
+
+
+/* FIM DO SECTION */
+
+
+
+/* LOGIN */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-button {
+  background-color: #2196F3; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+.login-input {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.login-link {
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+/* FIM DO LOGIN */

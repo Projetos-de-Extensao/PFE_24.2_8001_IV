@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SectionLeft from "../components/SectionLeft";
 function Atracoes() {
     return(
        <div>
