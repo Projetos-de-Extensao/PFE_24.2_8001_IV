@@ -1,35 +1,33 @@
 // SectionRight.js
 import React from 'react';
-import '../index.css'; // Estilos aplicados a partir do index.css
-import Image from '../media/img/ccxp-guide-foto.png'; 
-import leftSvg from '../media/svg/bussola.svg';
-import rightSvg from '../media/svg/bussola.svg';
+import '../index.css';
+import Image from '../media/img/ccxp-guide-foto.png';
+import IconSvg from '../media/svg/bussola.svg'
 
-
-function SectionRight(){
+function SectionRight() {
   return (
-    <div className="section-container">
+    <div className="section-container section-right">
       <div className="section-content">
-      <img src={leftSvg} alt="Left icon" className="left-svg" />
         <div className="text-content">
+          <div className='link-wrapper'>
           <h1>O que é o CCXP Guide?</h1>
           <p>
-            Todos os anos em que ocorre a CCXP em São Paulo, a cidade recebe milhares de visitantes.
-            Porém, sem as informações necessárias, a viagem pode se tornar conturbada em certo ponto.
+          Todos os anos, quando a CCXP (Comic Con Experience) acontece em São Paulo, a cidade se transforma em um verdadeiro polo de cultura pop, recebendo milhares de visitantes de diversas partes do Brasil e do mundo. No entanto, sem as informações adequadas, a experiência pode se tornar desafiadora em certos momentos, desde a logística de deslocamento até a escolha de acomodações e atrações turísticas.
           </p>
           <p>
-            Logo, esse site foi desenvolvido para acrescentar na experiência de todos os visitantes da CCXP 2024.
-            Nele, além de informações sobre o evento em si, você terá auxílio para uma boa e organizada estadia
-            na cidade de São Paulo.
+          Com isso em mente, este site foi desenvolvido para enriquecer a experiência de todos os participantes da CCXP 2024. Nele, você encontrará uma gama completa de informações sobre o evento, incluindo horários, atrações, palestras, convidados especiais e muito mais. Além disso, o site oferece orientações úteis para garantir uma estadia confortável e bem organizada na vibrante cidade de São Paulo.
           </p>
+          <div className='icon-svg'>
+        <img src={IconSvg} alt="Ícone" className="icon-svg" />
+        </div>
+        </div>
         </div>
         <div className="image-content">
           <img src={Image} alt="Público na CCXP" />
         </div>
-        <img src={rightSvg} alt="Right icon" className="right-svg" />
       </div>
     </div>
   );
-};
+}
 
 export default SectionRight;

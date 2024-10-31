@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import videoSrc from '../media/video/video-ccxp-HOME.mp4'; 
 import Footer from "../components/Footer";
 import SectionRight from "../components/SectionRight";
+import SectionLeft from "../components/SectionLeft";
+import CarrosselCcxp from "../components/CarrosselCcxp";
 
 
 function Home() {
@@ -16,14 +18,10 @@ function Home() {
         <video className="video-border" controls>
           <source src={videoSrc} type="video/mp4" />
         </video>
-       
-    
-        
-        <div>
-        
-        </div>
       </div>
       <SectionRight/>
+      <CarrosselCcxp/>
+      <SectionLeft/>
       <Footer />
     </div>
     </div>

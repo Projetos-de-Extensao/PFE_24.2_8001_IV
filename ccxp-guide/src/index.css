@@ -53,8 +53,14 @@ body.no-background {
 
 
 .content {
-  margin-top: 80px; /* Ajuste esse valor conforme a altura do header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 80px;
 }
+
 
 /* HERO */
 
@@ -301,7 +307,7 @@ button:focus-visible {
 /* SECTION */
 
 .section-container {
-  background-color: #242424; /* Fundo preto do elemento */
+  background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -314,34 +320,22 @@ button:focus-visible {
   position: relative; /* Para posicionamento absoluto dos ícones SVG */
 }
 
-.section-container .left-svg,
-.section-container .right-svg {
-  width: 40px; /* Ajuste o tamanho conforme necessário */
-  height: auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.section-container .left-svg {
-  left: -60px; /* Posiciona o ícone à esquerda */
-  z-index: +1;
-}
-
-.section-container .right-svg {
-  right: -60px; /* Posiciona o ícone à direita */
-  z-index: +1;
-  
-}
 
 .section-content {
   display: flex;
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1500px;
 }
 
 .section-left .image-content {
   order: 1; /* Imagem à esquerda */
+}
+
+.section-left .text-content {
+  order: 2; /* Texto à direita */
+}
+
+.section-right .text-content {
+  order: 1; /* Texto à esquerda */
 }
 
 .section-right .image-content {
@@ -352,7 +346,7 @@ button:focus-visible {
   flex: 1;
   padding: 20px;
   color: #fff;
-  background-color: #1A1A1A; /* Fundo interno da caixa de texto */
+  background-color: #1A1A1A; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -368,6 +362,32 @@ button:focus-visible {
   font-size: 1em;
   margin: 10px 0;
 }
+
+.link-wrapper {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-svg {
+  padding: 20px;
+  width: 100px;
+  height: 150px;
+  margin-bottom: 5px; /* Espaço entre o ícone e o link */
+}
+
+.styled-link {
+  color: white;
+  background-color: #FFCE00;
+  padding: 20px;
+  width: 200px;
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px; 
+}
+
 
 .image-content {
   flex: 1;
@@ -438,3 +458,74 @@ button:focus-visible {
 
 
 /* FIM DO LOGIN */
+
+/*CARROSSEL*/
+/* Container do Carrossel */
+.carousel-container {
+  padding: 100px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px; 
+  width: 80%;
+
+}
+
+/* Estilos das Imagens */
+.carousel-container img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Limitar altura máxima */
+  margin: 0 auto;
+}
+
+/* Texto do Carrossel */
+.carousel-text {
+  margin-top: 20px; /* Aumentar o espaço acima do texto */
+  color: #FFD700; /* Cor amarela */
+}
+
+.carousel-text h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.carousel-text p {
+  font-size: 1em;
+  color: white;
+  margin: 0;
+}
+
+/* Ícones Laterais */
+.icons-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+
+}
+
+.icons-container img {
+  width: 95px; /* Diminuir o tamanho dos ícones */
+  height: 95px;
+  border: 0px;
+  margin-bottom: 50px;
+}
+
+.left-icons {
+  left: -60px; /* Distância da imagem principal */
+  margin-right: 20px;
+  
+}
+
+.right-icons {
+  right: -60px; /* Distância da imagem principal */
+  margin-left: 20px;
+}
+
+/* FIM DO CARROSSEL*/
