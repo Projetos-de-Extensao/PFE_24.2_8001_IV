@@ -76,13 +76,13 @@ body.no-background {
 .efeito{
   color: gold ;
   font-weight: bolder;
-    margin-left: 10px; /* Ajuste o valor conforme necessário */
-    margin-right: 10px; /* Ajuste o valor conforme necessário */
+    margin-left: 10px; 
+    margin-right: 10px; 
 }
 
 .video-container {
   display: flex;
-  flex-direction: column; /* Alinha os elementos em coluna */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 0;
@@ -99,13 +99,12 @@ body.no-background {
 }
 
 .video-container img{
-  width: 100%;                   /* Makes the video responsive */
-  max-width: 800px;             /* Sets a maximum width for larger screens */
-  height: auto;                 /* Maintains the aspect ratio */
-  border-radius: 8px;          /* Adds rounded corners to the video */
+  width: 100%;                   
+  max-width: 800px;             
+  height: auto;                 
+  border-radius: 8px;         
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border: 5px solid yellow;        /* Borda amarela */
-  
+  border: 5px solid yellow;   
 }
 
 
@@ -534,7 +533,7 @@ button:focus-visible {
 /*CARROSSEL-Atracoes*/
 .carouselatracoes-container {
   margin: 0 auto;
-  max-width: 1920px; 
+  max-width: 1500px; 
   padding: 50px;
   position: relative;
 
@@ -543,9 +542,9 @@ button:focus-visible {
 
 
 .carouselatracoes-button {
-  position: absolute; /* Para posicionar os botões em relação ao contêiner */
-  top: 50%; /* Ajusta para o meio da tela */
-  transform: translateY(-50%); /* Centraliza verticalmente */
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
   z-index: 10; /* Certifique-se de que os botões estão acima das imagens */
   background-color: transparent; /* Torna o fundo transparente */
 }
@@ -562,3 +561,6 @@ button:focus-visible {
   color: transparent;
   
 }
+
+
+

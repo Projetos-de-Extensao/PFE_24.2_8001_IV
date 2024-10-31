@@ -9,7 +9,7 @@ import CarrosselCcxp from "../components/CarrosselCcxp";
 function Home() {
   return (
     <div >
-      <div className="content">
+      
       <Header />
       <h1 className="frase-principal">
         Tenha a melhor e mais completa experiência na <span className="efeito">CCXP 2024!</span>
@@ -24,7 +24,7 @@ function Home() {
       <SectionLeft/>
       <Footer />
     </div>
-    </div>
+
   );
 }
 
