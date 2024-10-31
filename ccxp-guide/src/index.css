@@ -459,9 +459,9 @@ button:focus-visible {
 
 /* FIM DO LOGIN */
 
-/*CARROSSEL*/
+/*CARROSSEL-CCXP*/
 /* Container do Carrossel */
-.carousel-container {
+.carouselccxp-container {
   padding: 100px;
   text-align: center;
   position: relative;
@@ -472,7 +472,7 @@ button:focus-visible {
 }
 
 /* Estilos das Imagens */
-.carousel-container img {
+.carouselccxp-container img {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 10px;
@@ -483,17 +483,17 @@ button:focus-visible {
 }
 
 /* Texto do Carrossel */
-.carousel-text {
+.carouselccxp-text {
   margin-top: 20px; /* Aumentar o espaço acima do texto */
   color: #FFD700; /* Cor amarela */
 }
 
-.carousel-text h2 {
+.carouselccxp-text h2 {
   font-size: 1.5em;
   margin-bottom: 5px;
 }
 
-.carousel-text p {
+.carouselccxp-text p {
   font-size: 1em;
   color: white;
   margin: 0;
@@ -528,4 +528,37 @@ button:focus-visible {
   margin-left: 20px;
 }
 
-/* FIM DO CARROSSEL*/
+/* FIM DO CARROSSEL-CCXP*/
+
+
+/*CARROSSEL-Atracoes*/
+.carouselatracoes-container {
+  margin: 0 auto;
+  max-width: 1920px; 
+  padding: 50px;
+  position: relative;
+
+}
+
+
+
+.carouselatracoes-button {
+  position: absolute; /* Para posicionar os botões em relação ao contêiner */
+  top: 50%; /* Ajusta para o meio da tela */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  z-index: 10; /* Certifique-se de que os botões estão acima das imagens */
+  background-color: transparent; /* Torna o fundo transparente */
+}
+
+.carouselatracoes-prev-button {
+  left: 4%; /* Ajuste conforme necessário para trazer mais para o meio */
+  height: 100px;
+  color: transparent;
+}
+
+.carouselatracoes-next-button {
+  right: 4%; /* Ajuste conforme necessário para trazer mais para o meio */
+  height: 100px;
+  color: transparent;
+  
+}

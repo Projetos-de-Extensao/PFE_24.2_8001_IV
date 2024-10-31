@@ -14,7 +14,7 @@ function CarrosselCcxp() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -24,7 +24,7 @@ function CarrosselCcxp() {
   };
 
   return (
-    <div className="carousel-container">
+    <div className="carouselccxp-container">
       <div className="icons-container left-icons">
         <img src={Icon1} alt="Ícone 1" />
         <img src={Icon2} alt="Ícone 2" />
@@ -49,11 +49,11 @@ function CarrosselCcxp() {
         <img src={Icon3} alt="Ícone 3" />
       </div>
 
-      <div className="carousel-text">
+      <div className="carouselccxp-text">
         <h2>CCXP 2024:</h2>
         <p>
         A CCXP é um multiverso para chamar de seu, um lugar onde todos os crossovers são possíveis e reais. Aqui, os momentos épicos estão por toda parte. Uma hora você está explorando seus universos favoritos em ativações de tirar o fôlego, e de repente, BOOM, em questão de alguns passos, você encontra uma lenda dos quadrinhos no Artists' Valley.
-        Andar pelo pavilhão é esperar o inesperado. Colecionáveis exclusivos, painéis que chutam bundas, anúncios inéditos, cosplays, campeonatos de eSports (com "s" maiúsculo e sotaque gringo), shows ao vivo… as possibilidades são infinitas. A única dúvida que resta é:
+        Andar pelo pavilhão é esperar o inesperado. Colecionáveis exclusivos, painéis que chutam bundas, anúncios inéditos, cosplays, campeonatos de eSports, shows ao vivo… as possibilidades são infinitas.
         </p>
       </div>
     </div>
