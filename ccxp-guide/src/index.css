@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
-
 * {
   box-sizing: border-box;
   max-width: 100%;
@@ -14,7 +13,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424; /* Cor de fundo padrão */
-  font-synthesis: none;
+  font-synthesis: none; /* Deixa tudo centralizado no meio da tela */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,13 +34,25 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: 100vw;
-  min-height: 100vh;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Impede rolagem horizontal */
   background-color: #535bf2;
   padding-top: 160px;
+  box-sizing: border-box; /* Para garantir que padding/margins não causem overflow */
 }
+
+
+.carouselccxp-container,
+.section-container {
+    width: 90vw; /* Ajusta a largura */
+    max-width: 1200px; /* Limite de largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px;
+}
+
 
 body.no-background {
   background-color: transparent;
@@ -62,12 +73,13 @@ body.no-background {
 .frase-principal {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: center; /* Centraliza o texto */
   font-size: 30px;
-  margin: 0;
+  margin: 0 auto; /* Garante que a margem seja automática para centralizar horizontalmente */
   color: white;
-  width: 70%;
+  width: 70%; /* Ajuste conforme necessário */
 }
+
 
 .efeito {
   color: gold;
@@ -76,40 +88,45 @@ body.no-background {
 }
 
 .video-container {
-  max-width: 70%;
-  display: flex;
+  max-width: 50%; /* Mantém a largura máxima do vídeo */
+  display: flex; 
   flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-  width: 100%;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  margin: 20px auto; /* Centraliza a margem vertical */
+  width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
   overflow: hidden;
+  text-align: center; /* Centraliza o texto, se houver */
 }
 
-.video-container video,
-.video-container img {
-  width: 100%;
+.video-container video {
+  width: 100%; /* O vídeo ocupa 100% da largura do contêiner */
+  max-width: 100%; /* Garante que o vídeo não ultrapasse o tamanho máximo */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border: 5px solid yellow;
-  margin-bottom: 20px;
-  max-width: 100%;
-  height: auto;
-  display: block;
 }
+
 
 /* HEADER */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza horizontalmente */
   align-items: center;
   width: 100%;
-  max-width: 1200px;
   padding: 20px;
   position: fixed;
   top: 0;
   z-index: 1000;
-  margin: auto 0;
 }
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 auto; /* Centraliza a lista de navegação */
+}
+
 
 .logo img {
   height: 76px;
@@ -157,6 +174,7 @@ body.no-background {
   color: white;
   width: 100vw;
   position: relative;
+  text-align: center;
 }
 
 .footer-content {
@@ -170,8 +188,9 @@ body.no-background {
   text-align: center;
 }
 
-.footer img{
+.footer img {
   max-width: 20px;
+  text-align: center;
 }
 
 .footer-links ul,
@@ -206,6 +225,7 @@ body.no-background {
   width: 90vw;
   max-width: 1200px;
 }
+
 .section-left, .section-right {
   flex: 1;
   margin: 0 10px;
@@ -228,9 +248,9 @@ body.no-background {
   color: #fff;
   background-color: #1A1A1A;
   text-align: center;
-    max-width: 800px; /* Ajusta para uma largura legível */
-    width: 100%;
-    margin: 0 auto;
+  max-width: 800px; /* Ajusta para uma largura legível */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .text-content h1 {
@@ -252,15 +272,17 @@ body.no-background {
   text-decoration: none;
   text-align: center;
   border-radius: 8px;
+  display: inline-block; /* Garante que o link se comporte como um bloco */
+  margin: 20px auto; /* Centraliza o link horizontalmente com margem automática */
 }
 
 /* CAROUSEL */
 .carouselccxp-container {
   padding: 100px;
   text-align: center;
-  position: relative;
+  align-items: center;
   width: 100%;
-  max-width: 1200px; /* Limite de largura máxima */
+  max-width: 120px; /* Limite de largura máxima */
   margin: 20px auto;
   overflow: hidden;
 }
@@ -269,22 +291,24 @@ body.no-background {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 10px;
-  width: 80%;
+  width: 8%;
   height: 40%;
-  border-radius: 10px;
-  
+  align-items: center;
 }
+
 .icons-container img {
   max-width: 80px; /* Ajuste para o tamanho desejado */
   height: auto;
   margin-bottom: 50px;
 }
+
 .carouselatracoes-container img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   padding: 10px;
 }
+
 .carouselatracoes-container {
   padding: 50px;
   position: relative;
@@ -328,7 +352,55 @@ body.no-background {
   .section-container,
   .carouselccxp-container,
   .video-container {
-    padding: 10px;
+    padding: 100px;
     width: 90vw;
   }
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+  background-color: #535bf2;
+  padding-top: 160px;
+  box-sizing: border-box; /* Para garantir que padding/margins não causem overflow */
+}
+
+.carouselccxp-container,
+.section-container {
+  width: 90vw; /* Ajusta a largura */
+  max-width: 1200px; /* Limite de largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centraliza os itens de navegação */
+  gap: 20px; /* Espaço entre itens de navegação */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 auto; /* Centraliza a lista de navegação */
 }
