@@ -29,11 +29,11 @@ body {
   flex-direction: column; /* Para garantir que os itens sejam empilhados verticalmente */
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
   background-color: #535bf2;
   font-family: 'Outfit', sans-serif;
-  padding-top: 80px;
+  padding-top: 145px;
   
 }
 
@@ -46,7 +46,7 @@ body.no-background {
   flex-direction: column; /* Para garantir que os itens sejam empilhados verticalmente */
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
-  min-width: 320px;
+  min-width: 100%;
   font-family: 'Outfit', sans-serif;
   padding-top: 80px;
 }
@@ -54,6 +54,7 @@ body.no-background {
 
 .content {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,11 +67,14 @@ body.no-background {
 
 .frase-principal {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente, se necessário */
-  font-size: 50px;
+  font-size: 30px;
   margin: 0; /* Remova o auto, pois não é necessário aqui */
   color: white ;
+  width: 70%;
 }
 
 .efeito{
@@ -81,6 +85,7 @@ body.no-background {
 }
 
 .video-container {
+  max-width: 70%;
   display: flex;
   flex-direction: column; /* Alinha os elementos em coluna */
   justify-content: center;
@@ -149,9 +154,10 @@ button:focus-visible {
 /* HEADER */
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between; /* Logo à esquerda e navegação à direita */
   align-items: center;
-  width: 100%;
+  width: 50%;
   max-width: 1200px; /* Limita a largura máxima do header */
   margin: 0 auto; /* Centraliza o header na página */
   padding: 20px;
@@ -164,7 +170,7 @@ button:focus-visible {
 
 /* Estilos para o Logo */
 .logo {
-  margin-right: auto; /* Mantém o logo à esquerda */
+  justify-content: center;
 }
 
 .logo img {
@@ -175,12 +181,15 @@ button:focus-visible {
 /* Estilos para a Navegação */
 .nav {
   display: flex;
+  
   justify-content: flex-end; /* Alinha a navegação à direita */
 }
 
 .nav-list {
   display: flex;
+  flex-direction: column;
   list-style: none;
+  width: 60%;
   margin: 0;
   padding: 0;
 }
@@ -214,6 +223,8 @@ button:focus-visible {
 
 /* FOOTER */
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: #3b3b4f; /* Cor de fundo do footer */
   padding: 20px;
   color: white;
@@ -226,7 +237,7 @@ button:focus-visible {
 .footer-content {
   max-width: 1200px; /* Limita o conteúdo interno para uma largura máxima */
   margin: 0 auto; /* Centraliza o conteúdo interno */
-  display: flex;
+  
   justify-content: space-between; /* Espaça os elementos internos */
   align-items: center;
 }
@@ -241,6 +252,7 @@ button:focus-visible {
 
 .footer-links {
   color: #f1c40f;
+  text-align: center;
 }
 
 .footer-links h3 {
@@ -310,19 +322,20 @@ button:focus-visible {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   border-top: 10px solid #5B28E5; /* Borda roxa no topo */
   border-bottom: 10px solid #5B28E5; /* Borda roxa na parte inferior */
   margin: 20px 0; /* Espaço entre as seções */
-  width: 100%;
+  width: 50%;
   position: relative; /* Para posicionamento absoluto dos ícones SVG */
 }
 
 
 .section-content {
   display: flex;
+  flex-direction: column;
   max-width: 1500px;
 }
 
@@ -466,8 +479,8 @@ button:focus-visible {
   text-align: center;
   position: relative;
   margin: 0 auto;
-  max-width: 800px; 
-  width: 80%;
+  max-width: 80%; 
+  width: 200px;
 
 }
 
@@ -511,9 +524,8 @@ button:focus-visible {
 }
 
 .icons-container img {
-  width: 95px; /* Diminuir o tamanho dos ícones */
-  height: 95px;
-  border: 0px;
+  max-width: 80px; /* Ajuste para o tamanho desejado */
+  height: auto;
   margin-bottom: 50px;
 }
 
@@ -532,33 +544,35 @@ button:focus-visible {
 
 
 /*CARROSSEL-Atracoes*/
-.carouselatracoes-container {
-  margin: 0 auto;
-  max-width: 1920px; 
-  padding: 50px;
-  position: relative;
-
+.carouselccxp-container, .carouselatracoes-container {
+  max-width: 100%;
+  overflow: hidden; /* Oculta qualquer excesso */
+  padding: 20px; /* Ajuste o preenchimento conforme necessário */
 }
 
 
-
-.carouselatracoes-button {
-  position: absolute; /* Para posicionar os botões em relação ao contêiner */
-  top: 50%; /* Ajusta para o meio da tela */
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  z-index: 10; /* Certifique-se de que os botões estão acima das imagens */
-  background-color: transparent; /* Torna o fundo transparente */
+.carouselatracoes-prev-button, .carouselatracoes-next-button {
+  width: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px;
+  background-color: transparent;
 }
 
 .carouselatracoes-prev-button {
-  left: 4%; /* Ajuste conforme necessário para trazer mais para o meio */
-  height: 100px;
-  color: transparent;
+  left: 2%; /* Mais perto do centro para telas menores */
 }
 
 .carouselatracoes-next-button {
-  right: 4%; /* Ajuste conforme necessário para trazer mais para o meio */
-  height: 100px;
-  color: transparent;
-  
+  right: 2%; /* Mais perto do centro para telas menores */
+}
+
+@media (max-width: 768px) {
+  .carouselccxp-container, .carouselatracoes-container {
+    padding: 10px;
+    max-width: 90vw;
+  }
+
+  .icons-container img {
+    max-width: 60px; /* Reduzir ainda mais em telas menores */
+    margin-bottom: 30px;
+  }
 }
