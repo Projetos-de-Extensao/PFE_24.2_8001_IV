@@ -160,7 +160,7 @@ body.no-background {
 }
 
 .footer-content {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -168,6 +168,10 @@ body.no-background {
 .footer-texto {
   color: #f1c40f;
   text-align: center;
+}
+
+.footer img{
+  max-width: 20px;
 }
 
 .footer-links ul,
@@ -265,14 +269,15 @@ body.no-background {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 10px;
-  width: 100%;
-  max-height: 400px;
-  max-width: 100%;
-  height: auto;
+  width: 80%;
+  height: 40%;
   border-radius: 10px;
-  padding:
   
-  10px;
+}
+.icons-container img {
+  max-width: 80px; /* Ajuste para o tamanho desejado */
+  height: auto;
+  margin-bottom: 50px;
 }
 .carouselatracoes-container img {
   max-width: 100%;
