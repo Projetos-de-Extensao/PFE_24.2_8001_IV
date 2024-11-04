@@ -20,9 +20,13 @@ function CarrosselAtracoes() {
   };
 
   return (
-    <div className="carouselatracoes-container">
-      <Slider ref={sliderRef} {...settings}>
-        <div>
+      <div className="carouselatracoes-container">
+  <button
+    className="carouselatracoes-button carouselatracoes-prev-button"
+    onClick={() => sliderRef.current.slickPrev()}
+  />
+  <Slider className="carouselatracoes-slider" ref={sliderRef} {...settings}>
+  <div>
           <img src={Image1} alt="Imagem 1" />
         </div>
         <div>
@@ -31,22 +35,12 @@ function CarrosselAtracoes() {
         <div>
           <img src={Image3} alt="Imagem 3" />
         </div>
-      </Slider>
-
-      {/* Botões personalizados */}
-      <button
-        className="carouselatracoes-button carouselatracoes-prev-button"
-        onClick={() => sliderRef.current.slickPrev()}
-      >
-        Anterior
-      </button>
-      <button
-        className="carouselatracoes-button carouselatracoes-next-button"
-        onClick={() => sliderRef.current.slickNext()}
-      >
-        Próximo
-      </button>
-    </div>
+  </Slider>
+  <button
+    className="carouselatracoes-button carouselatracoes-next-button"
+    onClick={() => sliderRef.current.slickNext()}
+  />
+</div>
   );
 }
 

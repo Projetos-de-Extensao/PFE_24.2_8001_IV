@@ -78,6 +78,7 @@ body.no-background {
   margin: 0 auto; /* Garante que a margem seja automática para centralizar horizontalmente */
   color: white;
   width: 70%; /* Ajuste conforme necessário */
+  margin-top: 30px; /* Adjust this value as needed */
 }
 
 
@@ -88,24 +89,27 @@ body.no-background {
 }
 
 .video-container {
-  max-width: 50%; /* Mantém a largura máxima do vídeo */
-  display: flex; 
-  flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  margin: 20px auto; /* Centraliza a margem vertical */
-  width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw; /* Ajusta para ocupar 80% da largura da viewport */
+  max-width: 1200px; /* Define uma largura máxima */
+  margin: 20px auto;
+  padding-top: 56.25%; /* Proporção 16:9 */
+  position: relative; /* Necessário para posicionamento absoluto do vídeo */
   overflow: hidden;
-  text-align: center; /* Centraliza o texto, se houver */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: black; /* Adicione um fundo para verificar o contêiner */
 }
 
 .video-container video {
-  width: 100%; /* O vídeo ocupa 100% da largura do contêiner */
-  max-width: 100%; /* Garante que o vídeo não ultrapasse o tamanho máximo */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-
 
 /* HEADER */
 .header {
@@ -114,10 +118,13 @@ body.no-background {
   align-items: center;
   width: 100%;
   padding: 20px;
+  padding-bottom: 50px;
   position: fixed;
   top: 0;
   z-index: 1000;
 }
+
+
 
 .nav-list {
   list-style: none;
@@ -128,16 +135,18 @@ body.no-background {
 }
 
 
+
 .logo img {
   height: 76px;
   width: 70px;
+  min-width: 20%;
+  min-height: 20%;
 }
 
 .nav {
   display: flex;
-  flex-direction: row; /* Ajuste para navegação em linha horizontal */
-  justify-content: flex-end;
-  gap: 20px; /* Espaço entre itens de navegação */
+  justify-content: center;
+
 }
 
 .nav-list {
@@ -146,15 +155,16 @@ body.no-background {
   flex-direction: row;
   padding: 0;
   margin: 0;
+  gap: 15px; /* Espaço entre itens de navegação */
+   flex-wrap: nowrap; /* Evita quebra de linha */
 }
 
 .nav-list li {
-  margin: 0 15px;
-  margin-right: 20px;
+  
 }
 
 .nav-list .nav-link {
-  font-size: 18px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -189,7 +199,8 @@ body.no-background {
 }
 
 .footer img {
-  max-width: 20px;
+  width: 10%;
+  height: 10%;
   text-align: center;
 }
 
@@ -214,7 +225,6 @@ body.no-background {
 /* SECTION */
 .section-container {
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -222,13 +232,13 @@ body.no-background {
   border-top: 10px solid #5B28E5;
   border-bottom: 10px solid #5B28E5;
   margin: 20px auto;
-  width: 90vw;
+  width: 100vw;
   max-width: 1200px;
 }
 
 .section-left, .section-right {
   flex: 1;
-  margin: 0 10px;
+  margin: 0px;
 }
 
 .section-content {
@@ -282,17 +292,21 @@ body.no-background {
   text-align: center;
   align-items: center;
   width: 100%;
-  max-width: 120px; /* Limite de largura máxima */
+  max-width: 100vw; /* Limite de largura máxima */
   margin: 20px auto;
   overflow: hidden;
+}
+
+.carouselccxp-text h2{
+  color: #FFCE00;
 }
 
 .carouselccxp-container img {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 10px;
-  width: 8%;
-  height: 40%;
+  width: 80%;
+  height: 80%;
   align-items: center;
 }
 
@@ -302,38 +316,82 @@ body.no-background {
   margin-bottom: 50px;
 }
 
-.carouselatracoes-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  padding: 10px;
-}
 
 .carouselatracoes-container {
-  padding: 50px;
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* Limite de largura máxima */
-  margin: 20px auto;
-  overflow: hidden;
+  position: relative; /* Permite posicionar os botões em relação ao contêiner */
+  width: 100vw; /* Faz o carrossel ocupar toda a largura da tela */
+  height: 100vh; /* Faz o carrossel ocupar toda a altura da tela */
+  overflow: hidden; /* Impede rolagem indesejada */
 }
 
-.carouselatracoes-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  background-color: transparent;
+.carouselatracoes-slider {
+  width: 100%; /* Faz com que o carrossel ocupe 100% da largura do contêiner pai */
+  height: 100%; /* Faz com que o carrossel ocupe 100% da altura do contêiner pai */
+  display: flex; /* Exibe os itens em linha */
+  align-items: center; /* Centraliza os itens verticalmente */
+  overflow: hidden; /* Impede a rolagem indesejada */
 }
+
+.carouselatracoes-slider .slick-slide {
+  display: flex; /* Permite centralizar o conteúdo de cada slide */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100%; /* Faz cada slide ocupar a altura total do carrossel */
+}
+
+.carouselatracoes-slider img {
+  width: 100%; /* Ajusta as imagens para ocupar 100% da largura do slide */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Adiciona borda arredondada, se desejado */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Adiciona sombra à imagem */
+}
+
+/* Estilos para o controle de indicadores, se houver */
+.carouselatracoes-slider .slick-dots {
+  bottom: 20px; /* Posição dos indicadores */
+}
+
+.carouselatracoes-slider .slick-dots li button:before {
+  font-size: 12px; /* Tamanho dos indicadores */
+  color: rgba(255, 255, 255, 0.5); /* Cor dos indicadores inativos */
+}
+
+.carouselatracoes-slider .slick-dots li.slick-active button:before {
+  color: #fff; /* Cor do indicador ativo */
+}
+
+/* Estilo para transições suaves */
+.carouselatracoes-slider .slick-slide {
+  transition: transform 0.5s ease; /* Transição suave ao mudar de slide */
+}
+.carouselatracoes-button {
+  position: absolute; /* Permite posicionar os botões de forma absoluta */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajusta a centralização */
+  width: 50px; /* Ajuste de largura */
+  height: 50px; /* Ajuste de altura */
+  border: none; /* Remove borda padrão do botão */
+  background-color: transparent; /* Fundo transparente */
+  cursor: pointer; /* Altera o cursor para indicar interatividade */
+  z-index: 10; /* Garante que os botões estejam acima do carrossel */
+}
+
 
 .carouselatracoes-prev-button {
-  left: 4%;
-  height: 100px;
+  background-image: url('./media/svg/vectoresq.svg'); /* Caminho para a imagem de seta esquerda */
+  left: 10px; /* Posiciona o botão à esquerda */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .carouselatracoes-next-button {
-  right: 4%;
-  height: 100px;
+  background-image: url('./media/svg/vectordir.svg'); /* Caminho para a imagem de seta direita */
+  right: 10px; /* Posiciona o botão à direita */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media (max-width: 768px) {
@@ -345,12 +403,26 @@ body.no-background {
   }
 
   .nav-list {
-    flex-direction: column;
     align-items: center;
   }
 
+
+  .carouselccxp-container{
+    width: 95vw; /* Ajusta a largura do carrossel */
+    max-width: 1200px; /* Define um limite de largura máxima */
+    margin: 30px auto; /* Centraliza e adiciona espaço vertical */
+    padding: 20px; /* Reduz um pouco o padding */
+  }
+
+  .carouselccxp-container img{
+    width: 90%; /* Aumenta a largura das imagens no carrossel */
+    height: auto; /* Ajusta a altura automaticamente */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Reduz a margem entre o carrossel e SVGs */
+  }
+
   .section-container,
-  .carouselccxp-container,
+  
   .video-container {
     padding: 100px;
     width: 90vw;
@@ -379,16 +451,6 @@ body {
   padding: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
 
 .nav {
   display: flex;
@@ -397,10 +459,3 @@ body {
   gap: 20px; /* Espaço entre itens de navegação */
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0 auto; /* Centraliza a lista de navegação */
-}
