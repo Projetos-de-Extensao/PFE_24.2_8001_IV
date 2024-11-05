@@ -92,15 +92,15 @@ body.no-background {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw; /* Ajusta para ocupar 80% da largura da viewport */
-  max-width: 1200px; /* Define uma largura máxima */
+  width: 80vw; /* A largura do contêiner permanece em 80% da viewport */
+  max-width: 800px; /* Define uma largura máxima para evitar que o contêiner fique muito grande */
   margin: 20px auto;
-  padding-top: 56.25%; /* Proporção 16:9 */
+  aspect-ratio: 1.77; /* Proporção mais retangular (aproximadamente 16:9) */
   position: relative; /* Necessário para posicionamento absoluto do vídeo */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background-color: black; /* Adicione um fundo para verificar o contêiner */
+  background-color: black; /* Fundo do contêiner */
 }
 
 .video-container video {
@@ -109,7 +109,11 @@ body.no-background {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover; /* Garante que o vídeo preencha o contêiner sem distorção */
 }
+
+
+
 
 /* HEADER */
 .header {
@@ -289,34 +293,75 @@ body.no-background {
 
 /* CAROUSEL */
 .carouselccxp-container {
-  padding: 100px;
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo na vertical */
   align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 100vw; /* Limite de largura máxima */
+  max-width: 100vw; /* Limita a largura máxima */
   margin: 20px auto;
   overflow: hidden;
+  padding: 80px 20px; /* Diminuímos o padding para aproximar mais os ícones */
+  text-align: center;
+  
 }
 
-.carouselccxp-text h2{
+.carouselccxp-text h2 {
   color: #FFCE00;
+  margin-bottom: 10px; /* Ajustando espaço entre o título e o texto */
 }
 
 .carouselccxp-container img {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
   padding: 10px;
-  width: 80%;
-  height: 80%;
-  align-items: center;
+  width: 100%; /* A largura da imagem agora é 100% para preencher o contêiner */
+  height: auto;
+  max-height: 400px; /* Limita a altura máxima */
+  margin: 0 auto;
+}
+
+/* Ajustes para os ícones */
+.icons-container {
+  margin-top: 0px; /* Diminuímos o espaço entre o carrossel e os ícones */
+  display: flex;
+  justify-content: center; /* Centraliza os ícones */
+  gap: 30px; /* Ajuste do espaço entre os ícones */
 }
 
 .icons-container img {
   max-width: 80px; /* Ajuste para o tamanho desejado */
   height: auto;
-  margin-bottom: 50px;
-  gap: 50px;
+  margin-bottom: 0; /* Removemos a margem inferior para que fiquem mais próximos */
 }
+
+/* Comportamento do carrossel */
+.carouselccxp-container {
+  position: relative;
+  display: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.carouselccxp-container img {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 80%;
+  height: auto;
+  max-height: 400px;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+/* Ajuste de zoom */
+.carouselccxp-container:hover img {
+  transform: scale(1.05);
+}
+
 
 
 .carouselatracoes-container {
@@ -423,6 +468,7 @@ body.no-background {
       right: 0;
       margin: 0 auto;
       width: 100%;
+      
   }
 
   .nav {
@@ -434,7 +480,7 @@ body.no-background {
 
   .video-container video {
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: 5px solid yellow;
@@ -484,6 +530,7 @@ body.no-background {
       width: 85px; /* Tamanho proporcional para ícones no desktop */
       height: 85px;
       align-items: center;
+      
   }
 
   /* Estilo para a logo no header */
