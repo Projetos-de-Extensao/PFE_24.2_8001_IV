@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Background from '../components/Background';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+import Cadastro from '../components/Cadastro';
 
 
 
@@ -14,14 +15,15 @@ function Meu_perfil_cadastro() {
     return () => {
       document.body.classList.remove('no-background');
     };
-  }, [])
-  return (
-    <div>
+  }, []);
+    return (
+    <div>  
       <Background />
       <Header />
-      <h1 className="frase-principal">Essa é a página de cadastro</h1>
-    </div> 
-  );
-}
+      <Cadastro />
+    </div>
 
-export default Meu_perfil_cadastro;
+    );
+  }
+
+  export default Meu_perfil_cadastro;
