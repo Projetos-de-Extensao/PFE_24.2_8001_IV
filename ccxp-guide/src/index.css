@@ -204,8 +204,8 @@ body.no-background {
 }
 
 .footer img {
-  width: 10%;
-  height: 10%;
+  width: 20px;
+  height: 20px;
   text-align: center;
 }
 
@@ -238,7 +238,6 @@ body.no-background {
   border-bottom: 10px solid #5B28E5;
   margin: 20px auto;
   width: 100vw;
-  max-width: 1200px;
 }
 
 .section-left, .section-right {
@@ -317,7 +316,6 @@ body.no-background {
   padding: 10px;
   width: 100%; /* A largura da imagem agora é 100% para preencher o contêiner */
   height: auto;
-  max-height: 400px; /* Limita a altura máxima */
   margin: 0 auto;
 }
 
@@ -369,6 +367,7 @@ body.no-background {
   width: 100vw; /* Faz o carrossel ocupar toda a largura da tela */
   height: 100vh; /* Faz o carrossel ocupar toda a altura da tela */
   overflow: hidden; /* Impede rolagem indesejada */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo do tamanho */
 }
 
 .carouselatracoes-slider {
@@ -498,12 +497,100 @@ body.no-background {
       align-items: center;
   }
 
-  .section-container,
+
   .video-container {
       width: 80vw;
       padding: 70px;
       align-items: center;
   }
+
+  .section-container .section-left{
+    flex-direction: row;
+    width: 1200px;
+  }
+
+  
+  .section-left .image-content {
+    order: 1; /* Imagem à esquerda */
+  }
+
+  .section-left .text-content {
+    order: 2; /* Texto à direita */
+  }
+
+  .section-right .text-content {
+    order: 1;
+  padding: 40px;
+  }
+
+  .section-right .image-content {
+    order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  }
+  .text-content {
+    flex: 1;
+    padding: 20px;
+    color: #fff;
+    background-color: #1A1A1A; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .text-content h1 {
+    font-size: 2em;
+    color: #FFD700; /* Cor do título em amarelo */
+  }
+  
+  .text-content p {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+  
+  .link-wrapper {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-svg img {
+    padding: 20px;
+    max-width: 100%;
+    height: 80%;
+    display: block;
+    margin: 0 auto; /* Centers the icon */
+  }
+  
+  .styled-link {
+    color: white;
+    background-color: #FFCE00;
+    padding: 20px;
+    width: 200px;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px; 
+  }
+  
+  
+  .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);}
 
   .text-content h1 {
       font-size: 2em;
@@ -517,14 +604,34 @@ body.no-background {
   }
 
   .footer {
-    
-      padding: 10px;
-      align-items: center;
+    margin: 0 auto;
+    background-color: #3b3b4f; /* Cor de fundo do footer */
+    padding: 20px;
+    color: white;
+    width: 100vw; /* Garante que ocupe 100% da largura da janela de visualização */
+    position: relative; /* Garante que o posicionamento seja relativo à página */
+    left: 0;  /* Alinha o footer à esquerda da página */
+    right: 0; /* Alinha o footer à direita da página */
   }
 
   .footer-content{
+    display: flex;
     flex-direction: row;
+    align-items: center;
+      max-width: 1200px; /* Limita o conteúdo interno para uma largura máxima */
+      margin: 0 auto; /* Centraliza o conteúdo interno */
+      display: flex;
+      justify-content: space-between; /* Espaça os elementos internos */
+
   }
+
+  .footer-bottom {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
 
   .icons-container img {
       width: 85px; /* Tamanho proporcional para ícones no desktop */
@@ -563,12 +670,12 @@ body.no-background {
     margin-bottom: 10px; /* Reduz a margem entre o carrossel e SVGs */
   }
 
-  .section-container,
   
-  .video-container {
-    padding: 100px;
-    width: 90vw;
-  }
+  
+ .section-content{
+  display: flex;
+  flex-direction: row;
+ }
 
 body {
   margin: 0;
@@ -587,7 +694,7 @@ body {
 
 .carouselccxp-container,
 .section-container {
-  width: 90vw; /* Ajusta a largura */
+  width: 100vw; /* Ajusta a largura */
   max-width: 1200px; /* Limite de largura máxima */
   margin: 0 auto; /* Centraliza horizontalmente */
   padding: 20px;
