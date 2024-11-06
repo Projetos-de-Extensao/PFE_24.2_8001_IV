@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../index.css';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -17,13 +17,15 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle login logic here
     console.log('Email:', email);
     console.log('Password:', password);
+    
+    // Aqui você poderia incluir a lógica de autenticação
+    navigate('/home'); // Redireciona para a página "Home" após o login
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -46,7 +48,9 @@ const Login = () => {
         </div>
         <button type="submit">Entrar</button>
       </form>
-      <button><Link to = "/meu_perfil_cadastro">Não possui cadastro?</Link></button>
+      <Link to="/meu_perfil_cadastro" className="register-link">
+        Não possui cadastro?
+      </Link>
     </div>
   );
 };
