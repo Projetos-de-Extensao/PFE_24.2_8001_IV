@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Background from '../components/Background';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+import Login from '../components/Login';
+
 
 
 function Meu_perfil_login() {
@@ -18,8 +20,7 @@ function Meu_perfil_login() {
     <div>  
       <Background />
       <Header />
-      <h1 className="frase-principal">Essa é a página de login</h1>
-      <button><Link to = "/meu_perfil_cadastro">Não possui cadastro?</Link></button>
+      <Login />
     </div>
 
     );
