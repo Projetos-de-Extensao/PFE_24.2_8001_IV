@@ -362,87 +362,53 @@ body.no-background {
   margin-bottom: 0; /* Removemos a margem inferior para que fiquem mais próximos */
 }
 
-
-
-
-
+/* Estilo principal do container do carrossel */
 .carouselatracoes-container {
-  position: relative; /* Permite posicionar os botões em relação ao contêiner */
-  width: 100vw; /* Faz o carrossel ocupar toda a largura da tela */
-  height: 100vh; /* Faz o carrossel ocupar toda a altura da tela */
-  overflow: hidden; /* Impede rolagem indesejada */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px; /* Maior largura do carrossel */
+  margin: auto;
+  padding: 40px;
 }
 
+/* Container do carrossel */
 .carouselatracoes-slider {
-  width: 100%; /* Faz com que o carrossel ocupe 100% da largura do contêiner pai */
-  height: 100%; /* Faz com que o carrossel ocupe 100% da altura do contêiner pai */
-  display: flex; /* Exibe os itens em linha */
-  align-items: center; /* Centraliza os itens verticalmente */
-  overflow: hidden; /* Impede a rolagem indesejada */
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-.carouselatracoes-slider .slick-slide {
-  display: flex; /* Permite centralizar o conteúdo de cada slide */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  height: 100%; /* Faz cada slide ocupar a altura total do carrossel */
+/* Imagem do carrossel e estilo do container */
+.carouselatracoes-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+  user-select: none; /* Desativa a seleção de imagem */
+  overflow: hidden;
 }
 
-.carouselatracoes-slider img {
-  width: 100%; /* Ajusta as imagens para ocupar 100% da largura do slide */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 10px; /* Adiciona borda arredondada, se desejado */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Adiciona sombra à imagem */
+.carouselatracoes-image-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease;
+  pointer-events: none; /* Desativa eventos do ponteiro na imagem */
 }
 
-/* Estilos para o controle de indicadores, se houver */
-.carouselatracoes-slider .slick-dots {
-  bottom: 20px; /* Posição dos indicadores */
-}
-
-.carouselatracoes-slider .slick-dots li button:before {
-  font-size: 12px; /* Tamanho dos indicadores */
-  color: rgba(255, 255, 255, 0.5); /* Cor dos indicadores inativos */
-}
-
-.carouselatracoes-slider .slick-dots li.slick-active button:before {
-  color: #fff; /* Cor do indicador ativo */
-}
-
-/* Estilo para transições suaves */
-.carouselatracoes-slider .slick-slide {
-  transition: transform 0.5s ease; /* Transição suave ao mudar de slide */
-}
-.carouselatracoes-button {
-  position: absolute; /* Permite posicionar os botões de forma absoluta */
-  top: 50%; /* Centraliza verticalmente */
-  transform: translateY(-300%); /* Ajusta a centralização */
-  width: 80px; /* Ajuste de largura */
-  height: 80px; /* Ajuste de altura */
-  border: none; /* Remove borda padrão do botão */
-  background-color: transparent; /* Fundo transparente */
-  cursor: pointer; /* Altera o cursor para indicar interatividade */
-  z-index: 10; /* Garante que os botões estejam acima do carrossel */
-  padding: 20px;
+.carouselatracoes-image-container:hover img {
+  transform: scale(1.05);
 }
 
 
-.carouselatracoes-prev-button {
-  background-image: url('./media/svg/vectoresq.svg'); /* Caminho para a imagem de seta esquerda */
-  left: 10px; /* Posiciona o botão à esquerda */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-
-.carouselatracoes-next-button {
-  background-image: url('./media/svg/vectordir.svg'); /* Caminho para a imagem de seta direita */
-  right: 10px; /* Posiciona o botão à direita */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 @media (min-width: 768px) {
   .header,

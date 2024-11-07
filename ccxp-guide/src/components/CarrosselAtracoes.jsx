@@ -1,46 +1,57 @@
-import React, { useRef } from 'react';
-import Slider from 'react-slick';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import '../index.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import Image1 from '../media/img/giancarlo.png'; 
 import Image2 from '../media/img/matt.png'; 
 import Image3 from '../media/img/vincent.png'; 
 
-function CarrosselAtracoes() {
-  const sliderRef = useRef(null); // Usar useRef para acessar o slider
+const images = [
+  { src: Image1, alt: 'Imagem 1', description: 'Descrição para Giancarlo' },
+  { src: Image2, alt: 'Imagem 2', description: 'Descrição para Matt' },
+  { src: Image3, alt: 'Imagem 3', description: 'Descrição para Vincent' }
+];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    pauseOnHover: true,
+function CarrosselAtracoes() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -100) {
+      handleNext();
+    } else if (info.offset.x > 100) {
+      handlePrev();
+    }
   };
 
   return (
-      <div className="carouselatracoes-container">
-  <button
-    className="carouselatracoes-button carouselatracoes-prev-button"
-    onClick={() => sliderRef.current.slickPrev()}
-  />
-  <Slider className="carouselatracoes-slider" ref={sliderRef} {...settings}>
-  <div>
-          <img src={Image1} alt="Imagem 1" />
-        </div>
-        <div>
-          <img src={Image2} alt="Imagem 2" />
-        </div>
-        <div>
-          <img src={Image3} alt="Imagem 3" />
-        </div>
-  </Slider>
-  <button
-    className="carouselatracoes-button carouselatracoes-next-button"
-    onClick={() => sliderRef.current.slickNext()}
-  />
-</div>
+    <div className="carouselatracoes-container">
+      <div className="carouselatracoes-slider">
+        <AnimatePresence>
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.2 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={handleDragEnd}
+            className="carouselatracoes-image-container"
+            style={{ cursor: 'grab' }}
+            whileTap={{ cursor: 'grabbing' }}
+          >
+            <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
   );
 }
 
