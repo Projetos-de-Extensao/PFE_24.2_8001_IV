@@ -167,9 +167,6 @@ body.no-background {
    flex-wrap: nowrap; /* Evita quebra de linha */
 }
 
-.nav-list li {
-  
-}
 
 .nav-list .nav-link {
   font-size: 15px;
@@ -407,6 +404,7 @@ body.no-background {
 .carouselatracoes-image-container:hover img {
   transform: scale(1.05);
 }
+
 
 
 
