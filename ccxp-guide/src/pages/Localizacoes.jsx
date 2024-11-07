@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from 'styled-components';
-
+import Locais from "../components/Locais";
 
 const BotaoEstilizado = styled.button`
   background-color: #3498db;
@@ -22,6 +22,9 @@ function Localizacoes() {
     <div> 
     <Header/>
     <h1 className="frase-principal">O melhor guia para se localizar ao redor do evento.</h1>
+    <div>
+      <Locais />
+    </div>
     <BotaoEstilizado>Clique aqui</BotaoEstilizado>
     <Footer />
     </div>  
