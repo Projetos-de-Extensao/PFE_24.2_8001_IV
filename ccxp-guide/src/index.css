@@ -316,51 +316,65 @@ body.no-background {
 }
 
 /* CAROUSEL */
-.inner-ccxp{
+/* Container principal do carrossel */
+/* Estilos gerais do container do carrossel */
+/* Estilos gerais do container do carrossel */
+/* Estilos gerais do container do carrossel */
+.carousel-ccxp-container {
+  padding: 40px;
+  max-width: 100%;
   display: flex;
-
-}
-
-.image-ccxp{
-  min-height: 200px;
-  min-width: 70%;
-  padding: 14px;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
 }
 
-.image-ccxp img{
-  width: 400px;
-  height: 150px;
+/* Estilo do container da imagem */
+.carousel-image-container {
+  width: 100%;
+  max-width: 800px; /* Ajusta o tamanho máximo */
+  height: 400px; /* Tamanho fixo para a altura da imagem */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinha as imagens verticalmente no centro */
+  position: relative;
+  overflow: hidden; /* Garante que nada sai da borda */
+}
+
+/* Estilo das imagens */
+.carousel-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta a imagem sem distorcer e preserva a proporção */
   border-radius: 12px;
-  pointer-events: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-ccxp-container{
-  padding: 80px;
-  margin: 0 auto;
-
+/* Estilo de texto */
+.carousel-ccxp-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
 }
 
-.carousel-ccxp{
-  cursor: grab;
-  overflow: hidden;
+.carousel-ccxp-text h2 {
+  color: #f1c40f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-ccxp-container {
+    padding: 20px;
+  }
+
+  .carousel-ccxp-text {
+    font-size: 1rem;
+  }
 }
 
 
-
-/* Ajustes para os ícones */
-.icons-container {
-  margin-top: 0px; /* Diminuímos o espaço entre o carrossel e os ícones */
-  display: flex;
-  justify-content: center; /* Centraliza os ícones */
-  gap: 30px; /* Ajuste do espaço entre os ícones */
-}
-
-.icons-container img {
-  max-width: 80px; /* Ajuste para o tamanho desejado */
-  height: auto;
-  margin-bottom: 0; /* Removemos a margem inferior para que fiquem mais próximos */
-}
 
 /* Estilo principal do container do carrossel */
 .carouselatracoes-container {
