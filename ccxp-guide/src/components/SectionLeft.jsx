@@ -20,7 +20,7 @@ function SectionLeft() {
           </p>
        
           <div className="link-wrapper">
-            <img src={IconSvg} alt="Ícone" className="icon-svg" />
+            <img src={IconSvg} alt="Ícone" className="icon-svg-loc" />
             <a href="https://www.saopauloexpo.com.br/pt/" className="styled-link">
               Acesse aqui!
             </a>

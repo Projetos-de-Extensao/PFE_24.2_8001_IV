@@ -61,7 +61,7 @@ body.no-background {
 
 .content {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,6 +240,27 @@ body.no-background {
   max-width: 1200px;
 }
 
+.image-content{
+  width: 100%;
+  height: 90%;
+}
+
+.image-content img{
+  height: 300px;
+  width: 100%;
+}
+
+.link-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-svg-loc{
+  width: 100px;
+  margin: 0 auto;
+  
+}
+
 .section-left, .section-right {
   flex: 1;
   margin: 0px;
@@ -291,34 +312,37 @@ body.no-background {
 }
 
 /* CAROUSEL */
-.carouselccxp-container {
+.inner-ccxp{
   display: flex;
-  flex-direction: column; /* Organiza o conteúdo na vertical */
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 100vw; /* Limita a largura máxima */
-  margin: 20px auto;
+
+}
+
+.image-ccxp{
+  min-height: 200px;
+  min-width: 70%;
+  padding: 14px;
   overflow: hidden;
-  padding: 80px 20px; /* Diminuímos o padding para aproximar mais os ícones */
-  text-align: center;
-  
 }
 
-.carouselccxp-text h2 {
-  color: #FFCE00;
-  margin-bottom: 10px; /* Ajustando espaço entre o título e o texto */
+.image-ccxp img{
+  width: 400px;
+  height: 150px;
+  border-radius: 12px;
+  pointer-events: none;
 }
 
-.carouselccxp-container img {
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  width: 100%; /* A largura da imagem agora é 100% para preencher o contêiner */
-  height: auto;
-  max-height: 400px; /* Limita a altura máxima */
+.carousel-ccxp-container{
+  padding: 80px;
   margin: 0 auto;
+
 }
+
+.carousel-ccxp{
+  cursor: grab;
+  overflow: hidden;
+}
+
+
 
 /* Ajustes para os ícones */
 .icons-container {
@@ -334,32 +358,7 @@ body.no-background {
   margin-bottom: 0; /* Removemos a margem inferior para que fiquem mais próximos */
 }
 
-/* Comportamento do carrossel */
-.carouselccxp-container {
-  position: relative;
-  display: fixed;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 100vw;
-  overflow: hidden;
-}
 
-.carouselccxp-container img {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  width: 80%;
-  height: auto;
-  max-height: 400px;
-  margin: 0 auto;
-  transition: transform 0.5s ease;
-}
-
-/* Ajuste de zoom */
-.carouselccxp-container:hover img {
-  transform: scale(1.05);
-}
 
 
 
@@ -668,12 +667,7 @@ button[type="submit"]:hover {
   .frase-principal{
     font-size: 40px;
   }
-  .carouselccxp-container {
-      width: 80vw;
-      max-width: 1000px;
-      padding: 40px;
-      align-items: center;
-  }
+
 
   .section-container,
   .video-container {
@@ -694,13 +688,17 @@ button[type="submit"]:hover {
   }
 
   .footer {
-    
+      
       padding: 10px;
       align-items: center;
   }
 
   .footer-content{
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    
   }
 
   .icons-container img {
@@ -726,21 +724,7 @@ button[type="submit"]:hover {
 /* Estilos específicos para a página Meu Perfil */
 
 
-
-
-  .carouselccxp-container{
-    width: 95vw; /* Ajusta a largura do carrossel */
-    max-width: 1200px; /* Define um limite de largura máxima */
-    margin: 30px auto; /* Centraliza e adiciona espaço vertical */
-    padding: 20px; /* Reduz um pouco o padding */
-  }
-
-  .carouselccxp-container img{
-    width: 90%; /* Aumenta a largura das imagens no carrossel */
-    height: auto; /* Ajusta a altura automaticamente */
-    border-radius: 10px;
-    margin-bottom: 10px; /* Reduz a margem entre o carrossel e SVGs */
-  }
+ 
 
   .section-container,
   
@@ -764,13 +748,28 @@ body {
   box-sizing: border-box; /* Para garantir que padding/margins não causem overflow */
 }
 
-.carouselccxp-container,
+
 .section-container {
   width: 90vw; /* Ajusta a largura */
   max-width: 1200px; /* Limite de largura máxima */
   margin: 0 auto; /* Centraliza horizontalmente */
   padding: 20px;
 }
+
+.section-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.image-content{
+  width: 50%;
+  height: 100%;
+  
+}
+
+
+
+
 
 }
 
