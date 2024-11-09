@@ -755,3 +755,66 @@ body {
 
 }
 
+/* src/components/CarouselPalcos.css */
+/* index.css */
+
+.carousel-palcos {
+  display: flex;
+  justify-content: center; /* Centraliza o carrossel na página */
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  cursor: grab; /* Altera o cursor para indicar que é arrastável */
+}
+
+.carousel-item {
+  min-width: 300px;
+  text-align: center;
+}
+
+.stage-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 300px; /* Define a largura máxima */
+  max-height: 200px; /* Define a altura máxima */
+  object-fit: cover;
+  pointer-events: none; /* Desativa o arraste padrão da imagem */
+}
+
+h3 {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Tela média */
+@media (min-width: 768px) {
+  .carousel-item {
+    min-width: 350px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Tela grande */
+@media (min-width: 1024px) {
+  .carousel-item {
+    min-width: 400
+  }
+}
+
