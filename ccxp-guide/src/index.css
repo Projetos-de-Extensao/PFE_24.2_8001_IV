@@ -74,7 +74,7 @@ body.no-background {
   display: flex;
   flex-direction: column;
   text-align: center; /* Centraliza o texto */
-  font-size: 30px;
+  font-size: 25px;
   margin: 0 auto; /* Garante que a margem seja automática para centralizar horizontalmente */
   color: white;
   width: 70%; /* Ajuste conforme necessário */
@@ -400,7 +400,8 @@ body.no-background {
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 900px;
+  height: auto;
+  
   user-select: none; /* Desativa a seleção de imagem */
   overflow: hidden;
 }
@@ -757,22 +758,23 @@ body {
 
 /* src/components/CarouselPalcos.css */
 /* index.css */
-
 .carousel-palcos {
   display: flex;
-  justify-content: center; /* Centraliza o carrossel na página */
-  overflow: hidden;
+  justify-content: center;
   padding: 1rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel {
   display: flex;
   gap: 1rem;
-  cursor: grab; /* Altera o cursor para indicar que é arrastável */
+  cursor: grab;
 }
 
 .carousel-item {
-  min-width: 300px;
+  min-width: 40vw; /* Ocupa metade da largura da viewport, garantindo que 2 itens apareçam */
+  max-width: 40vw; /* Mantém a largura fixa em 50% da viewport */
   text-align: center;
 }
 
@@ -780,10 +782,8 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  max-width: 300px; /* Define a largura máxima */
-  max-height: 200px; /* Define a altura máxima */
   object-fit: cover;
-  pointer-events: none; /* Desativa o arraste padrão da imagem */
+  pointer-events: none;
 }
 
 h3 {
@@ -796,25 +796,25 @@ p {
   color: #666;
 }
 
+
 /* Tela média */
 @media (min-width: 768px) {
   .carousel-item {
-    min-width: 350px;
+    width: 300px;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
 /* Tela grande */
 @media (min-width: 1024px) {
   .carousel-item {
-    min-width: 400
+    width: 350px;
   }
 }
-
