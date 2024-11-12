@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import CarrosselAtracoes from "../components/CarrosselAtracoes";
 import CarouselPalcos from "../components/CarouselPalcos";
 import AtracoesBloco from "../components/AtracoesBloco";
+import CosplayMaster from "../components/CosplayMaster";
 function Atracoes() {
     return(
        <div>
@@ -10,6 +11,7 @@ function Atracoes() {
           <h1 className="frase-principal">Convidados internacionais, competições de cosplay e <span className="efeito"> muito mais! </span></h1>
           <CarrosselAtracoes/>
           <AtracoesBloco/>
+          <CosplayMaster/>
           <CarouselPalcos/>
           <Footer />
       </div>

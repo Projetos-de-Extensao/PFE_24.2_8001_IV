@@ -26,25 +26,6 @@ function AtracoesBloco() {
 
         </div>
       </div>
-    
-      <div className="section content">
-        <div className="text-cntent">
-            <div className ="link-wrapper">
-            <h1>Concurso de Cosplays</h1>
-            <p>Venha participar de nosso concurso de cosplay! Uma chance perfeita para voce
-                mostrar a sua dedicação e ter a oportunidade de ganhar um premio.
-                <a href="https://www.ccxp.com.br/concurso-cosplay-master-regulamento/"> Clique aqui para mais informações</a>
-            </p>
-            <div className ="image-content">
-                <img src={img2} alt="Concurso Cosplay" />
-                <img src={img3} alt="Concurso Cosplay" />
-            </div>
-
-            
-            </div>
-        </div>
-
-      </div>
     </div>
   );
 }

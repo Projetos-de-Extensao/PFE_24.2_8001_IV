@@ -25,7 +25,6 @@ function Localizacoes() {
     <div>
       <Locais />
     </div>
-    <BotaoEstilizado>Clique aqui</BotaoEstilizado>
     <Footer />
     </div>  
 );

@@ -249,6 +249,7 @@ body.no-background {
 .image-content img{
   height: 300px;
   width: 100%;
+  
 }
 
 .link-wrapper{
@@ -399,7 +400,7 @@ body.no-background {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 100vw;
   height: auto;
   
   user-select: none; /* Desativa a seleção de imagem */
@@ -409,6 +410,7 @@ body.no-background {
 .carouselatracoes-image-container img {
   width: 100%;
   max-width: 100%;
+  min-height: 120px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -750,9 +752,7 @@ body {
   
 }
 
-.image-content img{
-  height: 100%;
-}
+
 
 }
 
@@ -816,5 +816,154 @@ p {
 @media (min-width: 1024px) {
   .carousel-item {
     width: 350px;
+  }
+}
+
+
+.cosplay-master {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Banner Styling */
+.cosplay-banner {
+  background: yellow;
+  color: purple;
+  padding: 15px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.icons img {
+  width: 40px;
+  margin: 5px;
+}
+
+.banner-title h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-title img {
+  width: 40%;
+}
+
+
+
+/* Description Styling */
+.cosplay-description {
+  color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* Gallery Styling */
+.cosplay-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 8px;
+  height: 70%;
+  border: 5px solid white;
+}
+
+.gallery-item p {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+  .cosplay-banner {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .icons img {
+    width: 50px;
+  }
+
+  .banner-title h1 {
+    font-size: 32px;
+  }
+
+  .banner-title h2 {
+    font-size: 20px;
+  }
+
+  .cosplay-description {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 16px;
+  }
+
+  .cosplay-gallery {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .gallery-item {
+    width: 45%;
+  }
+
+  .gallery-item p {
+    font-size: 15px;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .cosplay-master {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .cosplay-banner {
+    padding: 30px;
+  }
+
+  .icons img {
+    width: 60px;
+    margin: 0 10px;
+  }
+
+  .banner-title h1 {
+    font-size: 40px;
+  }
+
+  .cosplay-description {
+    padding: 30px;
+    max-width: 800px;
+    font-size: 18px;
+  }
+
+  .gallery-item {
+    width: 30%;
+  }
+
+  .gallery-item p {
+    font-size: 16px;
   }
 }
