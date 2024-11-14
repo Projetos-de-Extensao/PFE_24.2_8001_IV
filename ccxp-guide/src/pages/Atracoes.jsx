@@ -4,6 +4,8 @@ import CarrosselAtracoes from "../components/CarrosselAtracoes";
 import CarouselPalcos from "../components/CarouselPalcos";
 import AtracoesBloco from "../components/AtracoesBloco";
 import CosplayMaster from "../components/CosplayMaster";
+import ArtistsValley from '../components/ArtistsValley';
+
 function Atracoes() {
     return(
        <div>
@@ -12,9 +14,11 @@ function Atracoes() {
           <CarrosselAtracoes/>
           <AtracoesBloco/>
           <CosplayMaster/>
+          <ArtistsValley/>
           <CarouselPalcos/>
           <Footer />
       </div>
   )}
-
+  
+  
   export default Atracoes;

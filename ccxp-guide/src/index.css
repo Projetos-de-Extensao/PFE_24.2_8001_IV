@@ -990,6 +990,43 @@ body {
   font-weight: bold;
   font-size: 14px;
 }
+.artists-valley-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2f2978; /* Cor de fundo azul */
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.artists-valley-header {
+  margin-bottom: 1rem;
+}
+
+.artists-valley-logo {
+  
+  width: 100vw; /* Faz a imagem ser responsiva */
+  height: 500; /* Mantém a proporção da imagem */
+  margin-bottom: 1rem; /* Espaçamento entre a imagem e outros elementos */
+}
+
+.artists-valley-logo img {
+  height: 200vw;
+}
+
+
+.artists
+-valley-description { font-size: 1.2rem; margin: 1rem 0; line-height: 1.6; max-width: 500px; }
+
+.artists-valley-content { display: flex; flex-direction: column; align-items: center; margin-top: 2rem; }
+
+.artists-valley-image { max-width: 100%; height: auto; border: 3px solid yellow; /* Borda amarela */ border-radius: 8px; margin-bottom: 1rem; }
+
+.artists-valley-button { background-color: #ffcc00; /* Amarelo / color: #2f2978; / Azul escuro */ border: none; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold; cursor: pointer; border-radius: 5px; text-transform: uppercase; }
+
+.artists-valley-button
+{ background-color: #e6b800; /* Amarelo mais escuro */ }
 
 /* Tablet (min-width: 768px) */
 @media (min-width: 768px) {
