@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Dropdown from './map_components/Dropdown';
-import MapView from './map_components/MapView';
+import Dropdown from './Dropdown';
+import MapView from './MapView';
 
 function Map() {
     const [userLocation, setUserLocation] = useState(null);
@@ -13,8 +13,8 @@ function Map() {
             navigator.geolocation.getCurrentPosition(
                 position => {
                     setUserLocation({
-                        lat: position.coords.latitude,
-                        lon: position.coords.longitude,
+                        lat: -23.6460103,
+                        lon: -46.6296564,
                     });
                 },
                 () => alert('Não foi possível obter a localização.')
