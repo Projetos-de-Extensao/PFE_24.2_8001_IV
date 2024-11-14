@@ -21,7 +21,7 @@ const BotaoEstilizado = styled.button`
 function Localizacoes() {
     return (
     <div> 
-    <Header/>
+    <Header />
     <h1 className="frase-principal">O melhor guia para se localizar ao redor do evento.</h1>
     <div>
       <Locais />
