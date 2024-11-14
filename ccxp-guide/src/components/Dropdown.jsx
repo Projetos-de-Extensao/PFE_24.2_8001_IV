@@ -1,9 +1,14 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const Dropdown = ({ selectedPlace, setSelectedPlace }) => {
     const handleChange = (event) => {
         setSelectedPlace(event.target.value);
     };
+
+    Dropdown.propTypes = {
+        selectedPlace: PropTypes.string.isRequired,
+        setSelectedPlace: PropTypes.func.isRequired,
+      };
 
     return (
         <select value={selectedPlace} onChange={handleChange}>

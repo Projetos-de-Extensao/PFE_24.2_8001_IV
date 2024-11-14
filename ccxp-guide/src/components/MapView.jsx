@@ -1,7 +1,7 @@
-import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import PropTypes from 'prop-types';
 
 // Corrigir ícones padrão do Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
@@ -31,6 +31,19 @@ const MapView = ({ userLocation, places }) => {
             ))}
         </MapContainer>
     );
+};
+
+MapView.propTypes = {
+    userLocation: PropTypes.shape({
+        lat: PropTypes.number.isRequired,
+        lon: PropTypes.number.isRequired,
+    }).isRequired,
+    places: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        lat: PropTypes.number.isRequired,
+        lon: PropTypes.number.isRequired,
+        tags: PropTypes.object.isRequired,
+    })).isRequired,
 };
 
 export default MapView;

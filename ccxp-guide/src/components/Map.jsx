@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Dropdown from './map_components/Dropdown';
-import MapView from './map_components/MapView';
+import  { useState, useEffect } from 'react';
+import Dropdown from './Dropdown';
+import MapView from './MapView';
 
 function Map() {
     const [userLocation, setUserLocation] = useState(null);
