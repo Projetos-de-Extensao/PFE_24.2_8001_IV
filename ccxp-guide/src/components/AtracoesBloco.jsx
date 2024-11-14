@@ -11,8 +11,9 @@ function AtracoesBloco() {
           <div className='link-wrapper'>
           <h1>Cosplays</h1>
           <p>
-            Encontre e tire foto com seus personagems favoritos! Na CCXP recebemos muitos participantes de Cosplay, ja sejam de 
-            Animes, Jogos, Series ou Filmes.
+          A cultura do cosplay é um dos pilares fundamentais da CCXP, transformando o evento em um verdadeiro espetáculo de criatividade e expressão. No coração da Comic Con Experience, o cosplay vai além de uma simples fantasia: ele representa uma celebração da paixão dos fãs por personagens e universos que moldam suas vidas, oferecendo uma forma única de interação com o mundo da cultura pop.
+
+Os cosplayers, com seu empenho e dedicação, dão vida a personagens icônicos de filmes, quadrinhos, animes, jogos e séries, tornando-se verdadeiros protagonistas do evento. A diversidade de estilos e referências transforma o ambiente da CCXP em um espaço de inclusão, onde cada pessoa, independente de sua origem ou idade, encontra uma maneira de se conectar com a cultura pop.
           
           </p>
 
@@ -21,7 +22,7 @@ function AtracoesBloco() {
         </div>
         </div>
         </div>
-        <div className="image-content">
+        <div className="image-content-cosplay">
           <img src={Image} alt="Público na CCXP" />
 
         </div>

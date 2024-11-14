@@ -21,7 +21,7 @@ const CosplayMaster = () => {
         <p>
         O Cosplay Master é o principal concurso de cosplay da CCXP (Comic Con Experience), realizado anualmente durante o evento. Voltado para cosplayers profissionais e amadores, o concurso celebra a arte de se caracterizar como personagens de filmes, séries, animes, quadrinhos e games, destacando a criatividade, o talento e a fidelidade ao personagem.
 O concurso possui várias etapas, incluindo pré-seleção e apresentações ao vivo no palco principal da CCXP, onde os participantes são avaliados por um júri especializado, levando em consideração a qualidade do figurino, a interpretação do personagem e a performance geral. Os vencedores recebem prêmios em dinheiro e reconhecimento na comunidade cosplay, além de ter a oportunidade de competir internacionalmente em outros eventos de cultura pop.
-O Cosplay Master é um dos destaques do evento, atraindo grande público e promovendo a integração da comunidade cosplay no Brasil.
+O Cosplay Master é um dos destaques do evento, atraindo grande público e promovendo a integração da comunidade cosplay no Brasil. <a href='https://www.ccxp.com.br/concurso-cosplay-master/'>Saiba mais!</a>
         </p>
       </div>
 

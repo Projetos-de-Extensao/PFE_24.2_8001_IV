@@ -48,10 +48,7 @@ body {
 .carouselccxp-container,
 .section-container {
     width: 90vw; /* Ajusta a largura */
-    max-width: 1200px; /* Limite de largura máxima */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 20px;
-}
+    margin: 0 auto; /* Centraliza horizontalmente */}
 
 
 body.no-background {
@@ -238,16 +235,16 @@ body.no-background {
   border-bottom: 10px solid #5B28E5;
   margin: 20px auto;
   width: 100vw;
-  max-width: 1200px;
 }
 
 .image-content{
   width: 100%;
-  height: 90%;
+  height: 100%;
+  align-items: center;
 }
 
 .image-content img{
-  height: 300px;
+  height: 400px;
   width: 100%;
   
 }
@@ -379,10 +376,10 @@ body.no-background {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 1000px; /* Maior largura do carrossel */
+  width: 100vw;
   margin: auto;
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* Container do carrossel */
@@ -410,7 +407,7 @@ body.no-background {
 .carouselatracoes-image-container img {
   width: 100%;
   max-width: 100%;
-  min-height: 120px;
+  min-height: 170px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -426,6 +423,10 @@ body.no-background {
 
 
 @media (min-width: 768px) {
+
+  .carouselatracoes-container{
+    width: 100vw;
+  }
   .header,
   .nav {
     flex-direction: column;
@@ -613,6 +614,7 @@ button[type="submit"]:hover {
     padding: 0.5rem;
     font-size: 0.9rem;
   }
+
 }
 
 
@@ -656,8 +658,7 @@ button[type="submit"]:hover {
 
   .section-container,
   .video-container {
-      width: 80vw;
-      padding: 70px;
+      width: 100vw;
       align-items: center;
   }
 
@@ -714,8 +715,7 @@ button[type="submit"]:hover {
   .section-container,
   
   .video-container {
-    padding: 100px;
-    width: 90vw;
+    width: 100vw;
   }
 
 body {
@@ -736,9 +736,9 @@ body {
 
 .section-container {
   width: 90vw; /* Ajusta a largura */
-  max-width: 1200px; /* Limite de largura máxima */
+
   margin: 0 auto; /* Centraliza horizontalmente */
-  padding: 20px;
+
 }
 
 .section-content{
@@ -758,9 +758,23 @@ body {
 
 /* src/components/CarouselPalcos.css */
 /* index.css */
+
+.carousel-palcos-titulo {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.2rem; /* Usa rem para se ajustar em relação ao tamanho base */
+  color: white;
+}
+
+.ccxp {
+  color: #f1c40f;
+  font-size: 2.5rem; /* Usa rem para um tamanho de fonte responsivo */
+}
+
 .carousel-palcos {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   width: 100%;
   overflow: hidden;
@@ -770,54 +784,141 @@ body {
   display: flex;
   gap: 1rem;
   cursor: grab;
+  transition: transform 0.3s ease;
+  justify-content: center;
 }
 
 .carousel-item {
-  min-width: 40vw; /* Ocupa metade da largura da viewport, garantindo que 2 itens apareçam */
-  max-width: 40vw; /* Mantém a largura fixa em 50% da viewport */
+  min-width: 50vw;
+  max-width: 50vw;
   text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .stage-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 500px;
+  border-radius: 15px;
   object-fit: cover;
   pointer-events: none;
-}
-
-h3 {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 0.9rem;
-  color: #666;
+  margin: 0 auto;
 }
 
 
-/* Tela média */
+
+.descricao-palco{
+  gap: 4px;
+}
+
+.descricao-palco h3 {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  
+}
+.descricao-palco p {
+  padding: 10px;
+  color: #1A1A1A;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: lighter;
+  
+}
+
+.image-content-cosplay img{
+  height: 300px;
+  width: 100%;
+}
+
+/* Ajustes para telas médias */
 @media (min-width: 768px) {
+  .image-content img{
+    height: 550px;
+  }
+
+  .descricao-palco h3 {
+    font-size: 30px;
+    
+  }
+  .descricao-palco p {
+    font-size: 20px;
+    
+  }
+  .carousel-palcos-container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
   .carousel-item {
-    width: 300px;
+    min-width: 65vw;
+    max-width: 65vw;
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
-  p {
-    font-size: 0.9rem;
+  .descricao-palcos {
+    font-size: 1rem; /* Aumenta o tamanho da fonte em telas médias */
+  }
+
+  .stage-image {
+    width: 100%;
+  }
+
+  .image-content-cosplay img{
+    height: 400px;
+    width: 100%;
   }
 }
 
-/* Tela grande */
+/* Ajustes para telas grandes */
 @media (min-width: 1024px) {
+  .image-content-cosplay img{
+    height: 400px;
+  }
+
+  .image-content img{
+    height: 650px;
+  }
+  .carousel-palcos-container {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
   .carousel-item {
-    width: 350px;
+    min-width: 25vw;
+    max-width: 25vw;
+  }
+
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .descricao-palco h3 {
+    font-size: 40px;
+    
+  }
+  .descricao-palco p {
+    font-size: 17px;
+    
+  }
+
+  .stage-image {
+    width: 100%;
   }
 }
+
+
+
 
 
 .cosplay-master {
@@ -858,7 +959,7 @@ p {
 
 /* Description Styling */
 .cosplay-description {
-  color: white;
+  color: black;
   padding: 15px;
   margin: 15px 0;
   border-radius: 8px;
@@ -934,6 +1035,7 @@ p {
 
 /* Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
+
   .cosplay-master {
     max-width: 1200px;
     margin: 0 auto;
