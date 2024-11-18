@@ -1172,11 +1172,8 @@ body {
 }
 
 /* Texto dentro do cartão */
-.card h3 {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.4; /* Melhora a legibilidade */
+.card h1 {
+  color: rgb(212, 205, 22);
 }
 
 
