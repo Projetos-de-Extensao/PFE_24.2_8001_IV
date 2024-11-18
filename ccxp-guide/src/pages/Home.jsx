@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import SectionRight from "../components/SectionRight";
 import SectionLeft from "../components/SectionLeft";
 import CarrosselCcxp from "../components/CarrosselCcxp";
+import Ingressos from "../components/Ingressos";
 
 
 function Home() {
@@ -22,6 +23,7 @@ function Home() {
       <SectionRight/>
       <CarrosselCcxp/>
       <SectionLeft/>
+      <Ingressos />
       <Footer />
     </div>
 

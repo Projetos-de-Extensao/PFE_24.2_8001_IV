@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from 'styled-components';
 import Locais from "../components/Locais";
-import Map from "../components/Map";
+
 
 const BotaoEstilizado = styled.button`
   background-color: #3498db;
@@ -26,7 +26,6 @@ function Localizacoes() {
     <div>
       <Locais />
     </div>
-    <Map />
     <Footer />
     </div>  
 );

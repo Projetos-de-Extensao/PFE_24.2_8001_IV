@@ -340,8 +340,8 @@ body.no-background {
 .carousel-image-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ajusta a imagem sem distorcer e preserva a proporção */
   border-radius: 12px;
+  border:solid #e6b800 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -352,6 +352,7 @@ body.no-background {
   text-align: center;
   color: white;
   padding: 0 20px;
+  width: 70%;
 }
 
 .carousel-ccxp-text h2 {
@@ -1015,6 +1016,12 @@ body {
   height: 200vw;
 }
 
+.botao{
+  background-color: #e6b800;
+  width: 15%;
+  color: white;
+  height: 50px;
+}
 
 .artists
 -valley-description { font-size: 1.2rem; margin: 1rem 0; line-height: 1.6; max-width: 500px; }
@@ -1106,3 +1113,109 @@ body {
     font-size: 16px;
   }
 }
+
+/*INGRESSOS*/
+/* Estilo base (mobile-first) */
+.ingressos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  overflow: hidden; /* Impede overflow */
+}
+
+.ingressos-titulo {
+  font-size: 1.8rem; /* Tamanho maior para legibilidade */
+  margin-bottom: 20px;
+  color: #FFD700;
+  line-height: 1.4; /* Melhora a legibilidade */
+  word-wrap: break-word; /* Evita estouro de palavras */
+}
+
+/* Contêiner dos cartões */
+.ingressos-cards {
+  display: flex;
+  flex-wrap: wrap; /* Quebra os cartões em múltiplas linhas em telas menores */
+  flex-direction: column;
+  gap: 40px; /* Espaçamento entre os cartões */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ingressos-descricao{
+  font-size: 0.8rem;
+}
+/* Cartões */
+.card {
+  background-color: #f9f9f9;
+  color: #1A1A1A;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: auto; /* Ajusta automaticamente a largura ao conteúdo */
+  min-width: 140px; /* Tamanho mínimo para manter consistência */
+  max-width: 70%; /* Limita o tamanho do cartão em dispositivos menores */
+  height: auto; /* Ajusta automaticamente a altura ao conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem; /* Texto inicial maior */
+  word-wrap: break-word; /* Evita estouro de palavras */
+}
+
+/* Texto dentro do cartão */
+.card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4; /* Melhora a legibilidade */
+}
+
+
+/* Animação nos cartões */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para telas de 768px (tablets) */
+@media (min-width: 768px) {
+  .ingressos-titulo {
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+  }
+
+  .card {
+      min-width: 180px; /* Aumenta o tamanho mínimo dos cartões */
+      max-width: 45%; /* Limita largura em dispositivos médios */
+      padding: 25px;
+      font-size: 1.1rem; /* Ajusta o tamanho do texto */
+  }
+}
+
+/* Estilo para telas de 1024px (desktops pequenos e maiores) */
+@media (min-width: 1024px) {
+
+  .ingressos-cards{
+    flex-direction: row;
+  }
+  .ingressos-titulo {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+  }
+
+  .card {
+      min-width: 220px;
+      max-width: 300px; /* Limita largura em telas grandes */
+      padding: 30px;
+      font-size: 1.2rem; /* Texto maior em desktops */
+  }
+}
+
