@@ -121,7 +121,7 @@ const EstrelaFavorito = styled.button`
 
 const Locais = () => {
   const elements = [
-    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image:'/dom-restaurante.jpg'},
+    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: '/dom-restaurante.jpg' },
     { id: 2, category: 'Hoteis', name: 'Elemento 2', image: 'url_da_imagem_2.jpg' },
     { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg' },
     { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg' },
@@ -155,14 +155,17 @@ const Locais = () => {
 
   const getFilteredElements = () => {
     if (filteredCategory === '') {
-      // Para o filtro "Todos", mostra 1 local aleatório de cada categoria
+      
       const uniqueCategories = [...new Set(elements.map((element) => element.category))];
       return uniqueCategories.map((category) => {
         const randomElement = getRandomLocalFromCategory(category)[0];
         return randomElement;
       });
+    } else if (filteredCategory === 'Favoritos') {
+      
+      return elements.filter((element) => favoritos[element.id]);
     } else {
-      // Para outras categorias, mostra 4 locais da categoria (3 mais um adicional)
+      
       return getRandomLocalFromCategory(filteredCategory).slice(0, 4);
     }
   };
@@ -179,6 +182,7 @@ const Locais = () => {
         <FiltroBotao onClick={() => handleFilterChange('Shoppings')}>Shoppings</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Artes')}>Arte</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Esportes')}>Esportes</FiltroBotao>
+        <FiltroBotao onClick={() => handleFilterChange('Favoritos')}>Favoritos</FiltroBotao> {/* Novo botão de filtro */}
       </FiltroContainer>
 
       <LocaisContainer>
