@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+
+
+
 // Estilos para os botões de filtro
 const FiltroContainer = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ const LocalItem = styled.li`
   padding: 20px;
   margin: 15px 0;
   border-radius: 10px;
-  width: 85%;
+  width: 200em;
   text-align: center;
   font-size: 20px;
   display: flex;
@@ -79,8 +82,8 @@ const LocalImageText = styled.div`
 `;
 
 const LocalImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
   margin-right: 15px;
 `;
@@ -118,7 +121,7 @@ const EstrelaFavorito = styled.button`
 
 const Locais = () => {
   const elements = [
-    { id: 1, category: 'Restaurantes', name: 'Elemento 1', image: 'url_da_imagem_1.jpg' },
+    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image:'/dom-restaurante.jpg'},
     { id: 2, category: 'Hoteis', name: 'Elemento 2', image: 'url_da_imagem_2.jpg' },
     { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg' },
     { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg' },
@@ -130,7 +133,6 @@ const Locais = () => {
     { id: 10, category: 'Restaurantes', name: 'Elemento 10', image: 'url_da_imagem_10.jpg' },
     { id: 11, category: 'Hoteis', name: 'Elemento 11', image: 'url_da_imagem_11.jpg' },
     { id: 12, category: 'Natureza', name: 'Elemento 12', image: 'url_da_imagem_12.jpg' },
-    // Adicione mais locais conforme necessário
   ];
 
   const [filteredCategory, setFilteredCategory] = useState('');
