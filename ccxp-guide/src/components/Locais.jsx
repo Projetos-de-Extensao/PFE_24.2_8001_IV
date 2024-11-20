@@ -1,16 +1,18 @@
 // Locais.jsx
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import DomImage from '../media/img/dom-restaurante.jpg';
 
-
-
-
-// Estilos para os botões de filtro
 const FiltroContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    align-items: center;
+  }
 `;
 
 const FiltroBotao = styled.button`
@@ -29,23 +31,26 @@ const FiltroBotao = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
   }
 `;
 
-// Estilos para o container de locais
 const LocaisContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  max-width: 1300px;
+  width: 1000px;
   margin: 0 auto;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    padding: 10px;
+  }
 `;
 
-// Estilos para os itens de locais
 const LocalItem = styled.li`
   list-style: none;
   background-color: #4b0082;
@@ -53,7 +58,7 @@ const LocalItem = styled.li`
   padding: 20px;
   margin: 15px 0;
   border-radius: 10px;
-  width: 200em;
+  width: 100%;
   text-align: center;
   font-size: 20px;
   display: flex;
@@ -68,17 +73,26 @@ const LocalItem = styled.li`
   }
 
   @media (max-width: 768px) {
-    font-size: 18px;
-    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+     
   }
 `;
 
-// Estilos para a imagem e o texto à esquerda
+
 const LocalImageText = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 70%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 const LocalImage = styled.img`
@@ -86,26 +100,45 @@ const LocalImage = styled.img`
   height: 200px;
   border-radius: 10px;
   margin-right: 15px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 `;
 
 const LocalText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const LocalName = styled.h3`
   font-size: 22px;
   margin: 0;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const LocalCategory = styled.p`
   font-size: 16px;
   color: #ccc;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
-// Estilos para o botão de favorito
 const EstrelaFavorito = styled.button`
   background-color: transparent;
   border: none;
@@ -117,22 +150,44 @@ const EstrelaFavorito = styled.button`
   &:hover {
     color: gold;
   }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+`;
+
+const LocalLink = styled.a`
+  display: block;
+  color: #ffd700;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff700;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Locais = () => {
   const elements = [
-    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: '/dom-restaurante.jpg' },
-    { id: 2, category: 'Hoteis', name: 'Elemento 2', image: 'url_da_imagem_2.jpg' },
-    { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg' },
-    { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg' },
-    { id: 5, category: 'Artes', name: 'Elemento 5', image: 'url_da_imagem_5.jpg' },
-    { id: 6, category: 'Esportes', name: 'Elemento 6', image: 'url_da_imagem_6.jpg' },
-    { id: 7, category: 'Shoppings', name: 'Elemento 7', image: 'url_da_imagem_7.jpg' },
-    { id: 8, category: 'Artes', name: 'Elemento 8', image: 'url_da_imagem_8.jpg' },
-    { id: 9, category: 'Esportes', name: 'Elemento 9', image: 'url_da_imagem_9.jpg' },
-    { id: 10, category: 'Restaurantes', name: 'Elemento 10', image: 'url_da_imagem_10.jpg' },
-    { id: 11, category: 'Hoteis', name: 'Elemento 11', image: 'url_da_imagem_11.jpg' },
-    { id: 12, category: 'Natureza', name: 'Elemento 12', image: 'url_da_imagem_12.jpg' },
+    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: DomImage, link: 'https://domrestaurante.com.br' },
+    { id: 2, category: 'Hoteis', name: 'Elemento 2', image: 'url_da_imagem_2.jpg', link: 'https://exemplo-hotel.com' },
+    { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg', link: 'https://exemplo-natureza.com' },
+    { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg', link: 'https://exemplo-shoppings.com' },
+    { id: 5, category: 'Artes', name: 'Elemento 5', image: 'url_da_imagem_5.jpg', link: 'https://exemplo-artes.com' },
+    { id: 6, category: 'Esportes', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: 'https://exemplo-esportes.com' },
+    { id: 6, category: 'Esportes', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: ''},
+    { id: 7, category: 'Shoppings', name: 'Elemento 7', image: 'url_da_imagem_7.jpg', link:'' },
+    { id: 8, category: 'Artes', name: 'Elemento 8', image: 'url_da_imagem_8.jpg', link:'' },
+    { id: 9, category: 'Esportes', name: 'Elemento 9', image: 'url_da_imagem_9.jpg', link: ''},
+    { id: 10, category: 'Restaurantes', name: 'Elemento 10', image: 'url_da_imagem_10.jpg', link:'' },
+    { id: 11, category: 'Hoteis', name: 'Elemento 11', image: 'url_da_imagem_11.jpg', link:'' },
+    { id: 12, category: 'Natureza', name: 'Elemento 12', image: 'url_da_imagem_12.jpg', link: ''},
   ];
 
   const [filteredCategory, setFilteredCategory] = useState('');
@@ -149,25 +204,10 @@ const Locais = () => {
     }));
   };
 
-  const getRandomLocalFromCategory = (category) => {
-    return elements.filter((element) => element.category === category);
-  };
-
   const getFilteredElements = () => {
-    if (filteredCategory === '') {
-      
-      const uniqueCategories = [...new Set(elements.map((element) => element.category))];
-      return uniqueCategories.map((category) => {
-        const randomElement = getRandomLocalFromCategory(category)[0];
-        return randomElement;
-      });
-    } else if (filteredCategory === 'Favoritos') {
-      
-      return elements.filter((element) => favoritos[element.id]);
-    } else {
-      
-      return getRandomLocalFromCategory(filteredCategory).slice(0, 4);
-    }
+    if (filteredCategory === '') return elements;
+    if (filteredCategory === 'Favoritos') return elements.filter((element) => favoritos[element.id]);
+    return elements.filter((element) => element.category === filteredCategory);
   };
 
   const filteredElements = getFilteredElements();
@@ -182,7 +222,7 @@ const Locais = () => {
         <FiltroBotao onClick={() => handleFilterChange('Shoppings')}>Shoppings</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Artes')}>Arte</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Esportes')}>Esportes</FiltroBotao>
-        <FiltroBotao onClick={() => handleFilterChange('Favoritos')}>Favoritos</FiltroBotao> {/* Novo botão de filtro */}
+        <FiltroBotao onClick={() => handleFilterChange('Favoritos')}>Favoritos</FiltroBotao>
       </FiltroContainer>
 
       <LocaisContainer>
@@ -196,12 +236,17 @@ const Locais = () => {
                   <LocalCategory>{element.category}</LocalCategory>
                 </LocalText>
               </LocalImageText>
-              <EstrelaFavorito
-                isFavorito={favoritos[element.id]}
-                onClick={() => handleFavoritoClick(element.id)}
-              >
-                ⭐
-              </EstrelaFavorito>
+              <div>
+                <LocalLink href={element.link} target="_blank" rel="noopener noreferrer">
+                  Saiba mais
+                </LocalLink>
+                <EstrelaFavorito
+                  isFavorito={favoritos[element.id]}
+                  onClick={() => handleFavoritoClick(element.id)}
+                >
+                  ⭐
+                </EstrelaFavorito>
+              </div>
             </LocalItem>
           ))}
         </ul>
