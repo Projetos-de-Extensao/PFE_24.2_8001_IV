@@ -96,14 +96,14 @@ const LocalImageText = styled.div`
 `;
 
 const LocalImage = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 70%;
   border-radius: 10px;
   margin-right: 15px;
 
   @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     margin-right: 0;
     margin-bottom: 10px;
   }
@@ -175,16 +175,15 @@ const LocalLink = styled.a`
 
 const Locais = () => {
   const elements = [
-    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: DomImage, link: 'https://domrestaurante.com.br' },
+    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: DomImage, link: 'https://www.google.com/maps/place/D.O.M./@-23.56632,-46.66745,15z/data=!4m2!3m1!1s0x0:0x269955670d659e58?sa=X&ved=1t:2428&ictx=111' },
     { id: 2, category: 'Hoteis', name: 'Elemento 2', image: 'url_da_imagem_2.jpg', link: 'https://exemplo-hotel.com' },
     { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg', link: 'https://exemplo-natureza.com' },
     { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg', link: 'https://exemplo-shoppings.com' },
     { id: 5, category: 'Artes', name: 'Elemento 5', image: 'url_da_imagem_5.jpg', link: 'https://exemplo-artes.com' },
-    { id: 6, category: 'Esportes', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: 'https://exemplo-esportes.com' },
-    { id: 6, category: 'Esportes', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: ''},
+    { id: 6, category: 'Hospitais', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: 'https://exemplo-esportes.com' },
     { id: 7, category: 'Shoppings', name: 'Elemento 7', image: 'url_da_imagem_7.jpg', link:'' },
     { id: 8, category: 'Artes', name: 'Elemento 8', image: 'url_da_imagem_8.jpg', link:'' },
-    { id: 9, category: 'Esportes', name: 'Elemento 9', image: 'url_da_imagem_9.jpg', link: ''},
+    { id: 9, category: 'Hospitais', name: 'Elemento 9', image: 'url_da_imagem_9.jpg', link: ''},
     { id: 10, category: 'Restaurantes', name: 'Elemento 10', image: 'url_da_imagem_10.jpg', link:'' },
     { id: 11, category: 'Hoteis', name: 'Elemento 11', image: 'url_da_imagem_11.jpg', link:'' },
     { id: 12, category: 'Natureza', name: 'Elemento 12', image: 'url_da_imagem_12.jpg', link: ''},
@@ -221,7 +220,7 @@ const Locais = () => {
         <FiltroBotao onClick={() => handleFilterChange('Natureza')}>Natureza</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Shoppings')}>Shoppings</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Artes')}>Arte</FiltroBotao>
-        <FiltroBotao onClick={() => handleFilterChange('Esportes')}>Esportes</FiltroBotao>
+        <FiltroBotao onClick={() => handleFilterChange('Hospitais')}>Hospitais</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Favoritos')}>Favoritos</FiltroBotao>
       </FiltroContainer>
 
