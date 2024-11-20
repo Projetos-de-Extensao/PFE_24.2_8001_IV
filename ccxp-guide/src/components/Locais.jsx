@@ -1,4 +1,3 @@
-// Locais.jsx
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import DomImage from '../media/img/dom-restaurante.jpg';
@@ -77,10 +76,8 @@ const LocalItem = styled.li`
     padding: 15px;
     flex-direction: column;
     text-align: center;
-     
   }
 `;
-
 
 const LocalImageText = styled.div`
   display: flex;
@@ -204,12 +201,27 @@ const Locais = () => {
   };
 
   const getFilteredElements = () => {
-    if (filteredCategory === '') return elements;
-    if (filteredCategory === 'Favoritos') return elements.filter((element) => favoritos[element.id]);
-    return elements.filter((element) => element.category === filteredCategory);
+    if (filteredCategory === '') {
+      // Para a categoria "Todos", exibe 1 elemento aleatório de cada categoria
+      const categories = [...new Set(elements.map((element) => element.category))];
+      const uniqueElements = categories.map((category) => {
+        const categoryElements = elements.filter((element) => element.category === category);
+        const randomElement = categoryElements[Math.floor(Math.random() * categoryElements.length)]; // Escolhe um elemento aleatório
+        return randomElement;
+      });
+      return uniqueElements;
+    }
+  
+    if (filteredCategory === 'Favoritos') {
+      return elements.filter((element) => favoritos[element.id]);
+    }
+  
+    // Para outras categorias, retorna apenas 4 elementos
+    return elements.filter((element) => element.category === filteredCategory).slice(0, 4);
   };
-
+  
   const filteredElements = getFilteredElements();
+  
 
   return (
     <div>
@@ -219,36 +231,30 @@ const Locais = () => {
         <FiltroBotao onClick={() => handleFilterChange('Hoteis')}>Hotéis</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Natureza')}>Natureza</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Shoppings')}>Shoppings</FiltroBotao>
-        <FiltroBotao onClick={() => handleFilterChange('Artes')}>Arte</FiltroBotao>
+        <FiltroBotao onClick={() => handleFilterChange('Artes')}>Artes</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Hospitais')}>Hospitais</FiltroBotao>
         <FiltroBotao onClick={() => handleFilterChange('Favoritos')}>Favoritos</FiltroBotao>
       </FiltroContainer>
 
       <LocaisContainer>
-        <ul>
-          {filteredElements.map((element) => (
-            <LocalItem key={element.id}>
-              <LocalImageText>
-                <LocalImage src={element.image} alt={element.name} />
-                <LocalText>
-                  <LocalName>{element.name}</LocalName>
-                  <LocalCategory>{element.category}</LocalCategory>
-                </LocalText>
-              </LocalImageText>
-              <div>
-                <LocalLink href={element.link} target="_blank" rel="noopener noreferrer">
-                  Saiba mais
-                </LocalLink>
-                <EstrelaFavorito
-                  isFavorito={favoritos[element.id]}
-                  onClick={() => handleFavoritoClick(element.id)}
-                >
-                  ⭐
-                </EstrelaFavorito>
-              </div>
-            </LocalItem>
-          ))}
-        </ul>
+        {filteredElements.map((local) => (
+          <LocalItem key={local.id}>
+            <LocalImageText>
+              <LocalImage src={local.image} alt={local.name} />
+              <LocalText>
+                <LocalName>{local.name}</LocalName>
+                <LocalCategory>{local.category}</LocalCategory>
+                <LocalLink href={local.link}>Mais informações</LocalLink>
+              </LocalText>
+            </LocalImageText>
+            <EstrelaFavorito
+              isFavorito={favoritos[local.id]}
+              onClick={() => handleFavoritoClick(local.id)}
+            >
+              ★
+            </EstrelaFavorito>
+          </LocalItem>
+        ))}
       </LocaisContainer>
     </div>
   );
