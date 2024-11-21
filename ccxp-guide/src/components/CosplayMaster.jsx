@@ -29,15 +29,12 @@ O Cosplay Master é um dos destaques do evento, atraindo grande público e promo
       <div className="cosplay-gallery">
         <div className="gallery-item">
           <img src={Imagem1} alt="Cosplayer 1" />
-          <p>Caption for cosplayer 1</p>
         </div>
         <div className="gallery-item">
           <img src={Imagem2} alt="Cosplayer 2" />
-          <p>Caption for cosplayer 2</p>
         </div>
         <div className="gallery-item">
           <img src={Imagem3} alt="Cosplayer 3" />
-          <p>Caption for cosplayer 3</p>
         </div>
       </div>
     </div>
