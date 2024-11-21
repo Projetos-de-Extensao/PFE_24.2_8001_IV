@@ -202,7 +202,7 @@ const Locais = () => {
     { id: 2, category: 'Hoteis', name: 'Wyndham Ibirapuera', image: WyndhamImage, link: 'https://www.wyndhamhotels.com/pt-br/wyndham/sao-paulo-brazil/wyndham-sao-paulo-ibirapuera-convention-plaza-hotel/overview', descri:"Avenida Ibirapuera, 2927"},
     { id: 3, category: 'Natureza', name: 'Parque Ibirapuera', image: IbirapueraImage, link: 'https://www.parquedoibirapuera.org/', descri:"Av. Pedro Álvares Cabral - Vila Mariana"},
     { id: 4, category: 'Shoppings', name: 'JK Iguatemi', image: JkImage, link: 'https://iguatemi.com.br/jkiguatemi/', descri:"Av. Pres. Juscelino Kubitschek, 2041" },
-    { id: 5, category: 'Artes', name: 'MASP', image: MaspImage, link: 'https://masp.org.br/' },
+    { id: 5, category: 'Artes', name: 'MASP', image: MaspImage, link: 'https://masp.org.br/', descri:"Av. Paulista, 1578" },
     { id: 6, category: 'Hospitais', name: 'Hospital Sírio Libanes', image: SirioImage, link: 'https://hospitalsiriolibanes.org.br/', descri:"R. Joaquim Floriano, 533" },
     { id: 7, category: 'Shoppings', name: 'Iguatemi', image: IguatemiImage, link:'https://iguatemi.com.br/saopaulo/', descri:"Avenida Brigadeiro Faria Lima, 2232"},
     { id: 8, category: 'Artes', name: 'Pinacoteca', image: PinacotecaImage, link:'https://pinacoteca.org.br/', descri:"Praça da Luz, 2"},
