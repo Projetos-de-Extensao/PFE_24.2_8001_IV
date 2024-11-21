@@ -4,8 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 function Nav() {
   const location = useLocation();
 
-  // Verificar se estamos na página de login
-  const isLoginPage = location.pathname === "/login" || location.pathname === "/meu_perfil_login";
+ 
+  const isLoginOrCadastroPage = location.pathname === "/login" || location.pathname === "/meu_perfil_login" || location.pathname === "/meu_perfil_cadastro";
 
   return (
     <nav className="nav">
@@ -14,7 +14,7 @@ function Nav() {
           <Link
             to="/"
             className={location.pathname === "/" ? "active" : "nav-link"}
-            style={isLoginPage ? { color: "#5B28E5" } : {}}
+            style={isLoginOrCadastroPage ? { color: "#5B28E5" } : {}}
           >
             Home
           </Link>
@@ -23,7 +23,7 @@ function Nav() {
           <Link
             to="/atracoes"
             className={location.pathname === "/atracoes" ? "active" : "nav-link"}
-            style={isLoginPage ? { color: "#5B28E5" } : {}}
+            style={isLoginOrCadastroPage ? { color: "#5B28E5" } : {}}
           >
             Atrações
           </Link>
@@ -32,7 +32,7 @@ function Nav() {
           <Link
             to="/localizacoes"
             className={location.pathname === "/localizacoes" ? "active" : "nav-link"}
-            style={isLoginPage ? { color: "#5B28E5" } : {}}
+            style={isLoginOrCadastroPage ? { color: "#5B28E5" } : {}}
           >
             Localizações
           </Link>
@@ -41,7 +41,7 @@ function Nav() {
           <Link
             to="/meu_perfil_login"
             className={location.pathname === "/meu_perfil_login" ? "active" : "nav-link"}
-            style={isLoginPage ? { color: "#5B28E5" } : {}}
+            style={isLoginOrCadastroPage ? { color: "#5B28E5" } : {}}
           >
             Meu Perfil
           </Link>
