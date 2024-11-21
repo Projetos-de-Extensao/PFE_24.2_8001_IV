@@ -820,7 +820,7 @@ body {
 .descricao-palco h3 {
   text-align: center;
   font-size: 22px;
-  color: white;
+  color:  #f1c40f;
   font-weight: bolder;
   
 }
@@ -1174,7 +1174,7 @@ body {
 
 /* Texto dentro do cartão */
 .card h1 {
-  color: rgb(212, 205, 22);
+  color:  #351EF5;
 }
 
 

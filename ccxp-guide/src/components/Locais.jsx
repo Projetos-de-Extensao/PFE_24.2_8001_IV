@@ -9,6 +9,22 @@ import RadissonImage from '../media/img/radisson-blue.png';
 import WyndhamImage from '../media/img/wyndham.jpg';
 import TransamericaImage from '../media/img/transamerica-executive.jpg';
 import ComfortImage from '../media/img/comfort.jpg';
+import IbirapueraImage from '../media/img/ibirapuera.png';
+import JkImage from '../media/img/jk-iguatemi.png';
+import MaspImage from '../media/img/MASP.png';
+import SirioImage from '../media/img/sirio-libanes.png';
+import IguatemiImage from '../media/img/Iguatemi.png';
+import PinacotecaImage from '../media/img/pinacoteca.png';
+import EisteinImage from '../media/img/einstein.jpg';
+import VilaImage from '../media/img/vila-lobos.png';
+import BotanicoImage from '../media/img/jd-botanico.jpg';
+import ZooImage from '../media/img/zoo.jpg';
+import AnaliaImage from '../media/img/analia.png';
+import MarketImage from '../media/img/sp-market.png';
+import AfroImage from '../media/img/museu-afro.jpg';
+import ItauImage from '../media/img/itau.jpg';
+import MunicipalImage from '../media/img/municipal.png' ;
+import CriancaImage from '../media/img/crianca.jpg' ;
 
 
 const FiltroContainer = styled.div`
@@ -24,7 +40,7 @@ const FiltroContainer = styled.div`
 `;
 
 const FiltroBotao = styled.button`
-  background-color: #6a0dad;
+  background-color: #351EF5;
   color: white;
   padding: 12px 25px;
   border: none;
@@ -35,7 +51,7 @@ const FiltroBotao = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #551a8b;
+    background-color: #66B1F2;
   }
 
   @media (max-width: 768px) {
@@ -56,12 +72,13 @@ const LocaisContainer = styled.div`
   @media (max-width: 768px) {
     margin-top: 20px;
     padding: 10px;
+    max-width: 300px
   }
 `;
 
 const LocalItem = styled.li`
   list-style: none;
-  background-color: #4b0082;
+  background-color: #351EF5;
   color: white;
   padding: 20px;
   margin: 15px 0;
@@ -76,7 +93,7 @@ const LocalItem = styled.li`
   flex-wrap: wrap;
 
   &:hover {
-    background-color: #551a8b;
+    background-color: #6680F2;
     transform: translateY(-5px);
   }
 
@@ -181,23 +198,32 @@ const LocalLink = styled.a`
 
 const Locais = () => {
   const elements = [
-    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: DomImage, link: 'https://www.google.com/maps/place/D.O.M./@-23.56632,-46.66745,15z/data=!4m2!3m1!1s0x0:0x269955670d659e58?sa=X&ved=1t:2428&ictx=111', descri: "REstaurante barato"},
-    { id: 2, category: 'Hoteis', name: 'Wyndham Ibirapuera', image: WyndhamImage, link: 'https://www.google.com/travel/search?q=Wyndham%20sao%20paulo&g2lb=4814050%2C4874190%2C4893075%2C4899571%2C4899573%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078%2C72821155%2C72821159&hl=pt-BR&gl=br&ssta=1&ts=CAEaHBIaEhQKBwjoDxALGBkSBwjoDxALGBoYATICEAAqBwoFOgNCUkw&qs=CAEyE0Nnb0k1cTd2N3Q2UHBjUUpFQUU4CUIJEa39R6t6jNv8QgkRF9u9NkZ9Ry1CCRFMisIKRHcfRFo_Mj2qAToQATIfEAEiG1v9QFedAXyrGVqtRWnklgrmISX2vWfQ16rpCzIVEAIiEXd5bmRoYW0gc2FvIHBhdWxvahwKGg1-AxlEEhMIvbuzoefriQMV2GC4BB02Yy6p&ap=aAG6AQhvdmVydmlldw&ictx=111&ved=0CAAQ5JsGahcKEwjwtLmO5-uJAxUAAAAAHQAAAAAQEA' },
-    { id: 3, category: 'Natureza', name: 'Elemento 3', image: 'url_da_imagem_3.jpg', link: 'https://exemplo-natureza.com' },
-    { id: 4, category: 'Shoppings', name: 'Elemento 4', image: 'url_da_imagem_4.jpg', link: 'https://exemplo-shoppings.com' },
-    { id: 5, category: 'Artes', name: 'Elemento 5', image: 'url_da_imagem_5.jpg', link: 'https://exemplo-artes.com' },
-    { id: 6, category: 'Hospitais', name: 'Elemento 6', image: 'url_da_imagem_6.jpg', link: 'https://exemplo-esportes.com' },
-    { id: 7, category: 'Shoppings', name: 'Elemento 7', image: 'url_da_imagem_7.jpg', link:'' },
-    { id: 8, category: 'Artes', name: 'Elemento 8', image: 'url_da_imagem_8.jpg', link:'' },
-    { id: 9, category: 'Hospitais', name: 'Elemento 9', image: 'url_da_imagem_9.jpg', link: ''},
-    { id: 10, category: 'Restaurantes', name: 'Mocotó', image:  MocotoImage, link:'https://www.google.com/maps/place/Mocot%C3%B3+Bar+e+Restaurante/@-23.4910216,-46.5938413,14z/data=!4m6!3m5!1s0x94cef5f0d13f4bc9:0xcbf483956fa14303!8m2!3d-23.4867177!4d-46.5816933!16s%2Fg%2F1tg5d795?entry=ttu&g_ep=EgoyMDI0MTExOC4wIKXMDSoASAFQAw%3D%3D' },
-    { id: 11, category: 'Hoteis', name: 'Transamerica Executive', image: TransamericaImage, link:'https://www.google.com/maps/place/Transamerica+Executive+Congonhas/@-23.6272064,-46.6647562,15z/data=!4m2!3m1!1s0x0:0x922fc7a38fa57ec7?sa=X&ved=1t:2428&ictx=111' },
-    { id: 12, category: 'Natureza', name: 'Elemento 12', image: 'url_da_imagem_12.jpg', link: ''},
-    { id: 13, category: 'Restaurantes', name: 'Milk & Mello', image: MilkImage, link: 'https://www.google.com/maps/place/Milk+%26+Mellow+Cidade+Jardim/@-23.5854445,-46.7707588,12z/data=!4m22!1m15!4m14!1m6!1m2!1s0x94ce5742bc832a29:0xa9323f13433864db!2sItaim+Bibi!2m2!1d-46.6780743!2d-23.5837476!1m6!1m2!1s0x94ce576aa683fe37:0xbabd98b43ba2a36d!2sAv.+Cidade+Jardim,+1085+-+Jardim+Europa,+S%C3%A3o+Paulo+-+SP,+01453-000!2m2!1d-46.688429!2d-23.5855101!3m5!1s0x94ce576aa683fe37:0xbabd98b43ba2a36d!8m2!3d-23.5854445!4d-46.6883613!16s%2Fg%2F1tkmnp88?entry=ttu&g_ep=EgoyMDI0MTExOC4wIKXMDSoASAFQAw%3D%3D'},
-    { id: 14, category: 'Restaurantes', name: 'O Pasteleiro', image: PasteleiroImage, link: 'https://www.tripadvisor.com.br/Restaurant_Review-g303631-d5383002-Reviews-O_Pasteleiro-Sao_Paulo_State_of_Sao_Paulo.html'},
-    { id: 15, category: 'Restaurantes', name: 'Sodie Doces', image: SodieImage, link: 'https://sodiedoces.com.br/'},
-    { id: 16, category: 'Hoteis', name: 'Radisson Blu São Paulo', image: RadissonImage, link:'https://www.google.com/maps/place/Radisson+Blu+S%C3%A3o+Paulo/@-23.5826522,-46.6852585,15z/data=!4m2!3m1!1s0x0:0xf9ed44e93f34cde1?sa=X&ved=1t:2428&ictx=111' },
-    { id: 17, category: 'Hoteis', name: 'Comfort Hotel', image: ComfortImage, link:'https://www.google.com/maps/place/Comfort+Hotel+S%C3%A3o+Caetano/@-23.6248223,-46.5812645,15z/data=!4m2!3m1!1s0x0:0xee990a6c63f94f04?sa=X&ved=1t:2428&ictx=111' },
+    { id: 1, category: 'Restaurantes', name: 'D.O.M Restaurante', image: DomImage, link: 'https://www.domrestaurante.com.br/', descri: "Rua Barão de Capanema, 549"},
+    { id: 2, category: 'Hoteis', name: 'Wyndham Ibirapuera', image: WyndhamImage, link: 'https://www.wyndhamhotels.com/pt-br/wyndham/sao-paulo-brazil/wyndham-sao-paulo-ibirapuera-convention-plaza-hotel/overview', descri:"Avenida Ibirapuera, 2927"},
+    { id: 3, category: 'Natureza', name: 'Parque Ibirapuera', image: IbirapueraImage, link: 'https://www.parquedoibirapuera.org/', descri:"Av. Pedro Álvares Cabral - Vila Mariana"},
+    { id: 4, category: 'Shoppings', name: 'JK Iguatemi', image: JkImage, link: 'https://iguatemi.com.br/jkiguatemi/', descri:"Av. Pres. Juscelino Kubitschek, 2041" },
+    { id: 5, category: 'Artes', name: 'MASP', image: MaspImage, link: 'https://masp.org.br/' },
+    { id: 6, category: 'Hospitais', name: 'Hospital Sírio Libanes', image: SirioImage, link: 'https://hospitalsiriolibanes.org.br/', descri:"R. Joaquim Floriano, 533" },
+    { id: 7, category: 'Shoppings', name: 'Iguatemi', image: IguatemiImage, link:'https://iguatemi.com.br/saopaulo/', descri:"Avenida Brigadeiro Faria Lima, 2232"},
+    { id: 8, category: 'Artes', name: 'Pinacoteca', image: PinacotecaImage, link:'https://pinacoteca.org.br/', descri:"Praça da Luz, 2"},
+    { id: 9, category: 'Hospitais', name: 'Israelita Albert Einstein', image: EisteinImage, link: 'https://www.einstein.br/Pages/Home.aspx', descri:"Av. Albert Einstein, 627"},
+  { id: 10, category: 'Restaurantes', name: 'Mocotó', image:  MocotoImage, link:'https://mocoto.com.br/', descri:"Av. Nossa Sra. do Loreto, 1100"},
+    { id: 11, category: 'Hoteis', name: 'Transamerica Executive', image: TransamericaImage, link:'https://mocoto.com.br/', descri: "R. Vieira de Morais, 1960" },
+    { id: 12, category: 'Natureza', name: 'Parque Vila Lobos', image: VilaImage, link: 'https://www.parquevillalobos.net/', descri:"Av. Prof. Fonseca Rodrigues, 2001"},
+    { id: 13, category: 'Restaurantes', name: 'Milk & Mellow', image: MilkImage, link: 'https://milkmellow.com.br/', descri:"Av. Pres. Juscelino Kubitschek, 101"},
+    { id: 14, category: 'Restaurantes', name: 'O Pasteleiro', image: PasteleiroImage, link: 'https://www.tripadvisor.com.br/Restaurant_Review-g303631-d5383002-Reviews-O_Pasteleiro-Sao_Paulo_State_of_Sao_Paulo.html', descri:"Rua dos Comerciarios, 459"},
+    { id: 16, category: 'Hoteis', name: 'Radisson Blu São Paulo', image: RadissonImage, link:'https://www.booking.com/searchresults.pt-br.html?aid=356980&label=gog235jc-1DCAsoIEIWcmFkaXNzb24tYmx1LXNhby1wYXVsb0gtWANoIIgBAZgBLbgBF8gBDNgBA-gBAfgBAogCAagCA7gCkuD8uQbAAgHSAiRjNmRiMzU5Mi1hZjk1LTQ3Y2EtYWQ5MS1kY2Y0MTA5NTkzNjLYAgTgAgE&highlighted_hotels=265131&redirected=1&city=-671824&hlrd=user_sh&source=hotel&expand_sb=1&keep_landing=1&sid=61f2d6ebd68370c810bc328d031af4ec', descri:"Av. Cidade Jardim, 625"},
+    { id: 17, category: 'Hoteis', name: 'Comfort Hotel', image: ComfortImage, link:'https://www.booking.com/searchresults.pt-br.html?aid=1726433&label=comfort-sao-caetano-y_M823oIpsjK4YWWY%2A%2ACzAS466250329806%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-302750598627%3Alp9211962%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YbC4OlOULAnvcrFmvh1xnqM&gclid=Cj0KCQiA0fu5BhDQARIsAMXUBOJLSg2J6fwsBWXsXi_l4ulxIElLap4KYR_6trm64JLcMnhQzBQE67UaAjPgEALw_wcB&highlighted_hotels=1942048&redirected=1&city=-670108&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=61f2d6ebd68370c810bc328d031af4ec', descri:"Torre 2A, Alameda Terracota, 250" },
+    { id: 18, category: 'Natureza', name: 'Jardim Botânico', image: BotanicoImage, link: 'https://www.saopaulo.sp.gov.br/conhecasp/parques-e-reservas-naturais/jardim-botanico/', descri:"Av. Miguel Estefano, 3031"},
+    { id: 19, category: 'Natureza', name: 'Zoológico de São Paulo', image: ZooImage, link: 'https://ingressos.zoologico.com.br/?utm_source=google&utm_content=cid|21288890589|gid|165438531594|kwid|kwd-309651720671&gad_source=1&gclid=Cj0KCQiA0fu5BhDQARIsAMXUBOKNEG7UQJAFlw7BVt5D96XIwzE-h8EGJKb7mTeq1eLTRl1KtUJ933gaAtdEEALw_wcB', descri:"Av. Miguel Estefano, 4241" },
+    { id: 20, category: 'Shoppings', name: 'Shopping Anália Franco', image: AnaliaImage, link: 'https://www.shoppinganaliafranco.com.br/?gad_source=1&gclid=Cj0KCQiA0fu5BhDQARIsAMXUBOI7UauAkq-D9ZoLfzASOj9MVmciS7-bSHepSN-alwdag5EBLnel4fgaAg4cEALw_wcB', descri:"Av. Reg. Feijó, 1739" },
+    { id: 21, category: 'Shoppings', name: 'SP Market', image: MarketImage, link: 'https://www.shoppingspmarket.com.br/', descri: "Av. das Nações Unidas, 22540"},
+    { id: 22, category: 'Artes', name: 'Museu Afro', image: AfroImage, link: 'http://www.museuafrobrasil.org.br/visite/planeje-sua-visita/entrada-e-horario-de-funcionamento', descri:"Portão 10, Av. Pedro Álvares Cabral, s/n" },
+    { id: 23, category: 'Artes', name: 'Itaú Cultural', image: ItauImage, link: 'https://www.itaucultural.org.br/', descri:"Av. Paulista, 149" },
+    { id: 25, category: 'Hospitais', name: 'Hospital Municipal', image: MunicipalImage, link: 'https://www.einstein.br/estrutura/unidades/hospital-municipal-vila-santa-catarina', descri:"Av. Santa Catarina, 2785" },
+    { id: 26, category: 'Hospitais', name: 'Hospital da Criança', image: CriancaImage, link: 'https://www.rededorsaoluiz.com.br/', descri:"Rua das Perobas, 295"},
+    
+    
   ];
 
   const [filteredCategory, setFilteredCategory] = useState('');
